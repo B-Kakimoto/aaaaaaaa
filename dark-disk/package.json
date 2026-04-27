@@ -13,5 +13,13 @@
   },
   "dependencies": {
     "astro": "^6.1.9"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.4",
+    "mini-css-extract-plugin": "^2.10.2",
+    "sass": "^1.99.0",
+    "sass-loader": "^16.0.7",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2"
   }
 }
