@@ -1,5 +1,6 @@
 ---
 import '../styles/test.scss';
+import Layout from '../layouts/layout.astro';
 ---
 
 <!DOCTYPE html>
@@ -14,26 +15,9 @@ import '../styles/test.scss';
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <div class="cover cover-home">        
-            <header class="page-header wrapper">            
-                <h1 class="align-center">                
-                    <a href="index.html"><img class="logo" src="images/logo.svg" alt="WCBカフェホーム"></a>
-                </h1>
-                <nav>
-                    <ul class="main-nav font-english">
-                        <li><a><a href="news.html">News</a></li>
-                        <li><a><a href="menu.html">Menu</a></li>
-                        <li><a><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <h2 class="page-title font-english">We'll Make Your Day</h2>
-        </div>
-
         <section class="about">
             <h3 class="heading-large font-english">About Cafe</h3>
             <p>
@@ -41,7 +25,7 @@ import '../styles/test.scss';
                 素材の本来の美味しさを引き出したメニューを楽しみながら、癒しの時間をお過ごしください。
             </p>
             <div class="align-center">
-                <a class="btn" href="menu.html">メニューを見る</a>
+                <a class="btn" href="menu">メニューを見る</a>
             </div>
         </section>
 
@@ -68,8 +52,6 @@ import '../styles/test.scss';
             <div class="copyright">
                 <small>&copy; 2010 WCB Cafe</small>
             </div>
----
-import footer from '../components/footer.astro';
----
+        </footer>
     </body>
 </html>
