@@ -1,7 +1,6 @@
 ---
 import '../styles/test.scss';
-
-import Layout from '../layouts/Mystanding.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
 <!DOCTYPE html>
@@ -18,25 +17,19 @@ import Layout from '../layouts/Mystanding.astro';
         <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
     </head>
 
-    <Layouts>
-	    <header />
-    </Layouts>
-
     <body>
-        <section class="about">
-            <h3 class="heading-large font-english">About Cafe</h3>
-            <p>
-                WCB CAFEは無添加の厳選食材とおしゃれな店内が魅力のカフェです。心と体に優しい、それでいて飽きの来ない空間をご用意しています。
-                素材の本来の美味しさを引き出したメニューを楽しみながら、癒しの時間をお過ごしください。
-            </p>
-            <div class="align-center">
-                <a class="btn" href="menu">メニューを見る</a>
-            </div>
-        </section>
-
-        <Layouts>
-	        <footer />
+        <Layout title="トップページ">
+	        <section class="about">
+                <h3 class="heading-large font-english">About Cafe</h3>
+                <p>
+                    WCB CAFEは無添加の厳選食材とおしゃれな店内が魅力のカフェです。心と体に優しい、それでいて飽きの来ない空間をご用意しています。
+                    素材の本来の美味しさを引き出したメニューを楽しみながら、癒しの時間をお過ごしください。
+                </p>
+                <div class="align-center">
+                    <a class="btn" href="menu">メニューを見る</a>
+                </div>
+                <p><a href="/">INDEX</p>
+            </section>
         </Layouts>
-
     </body>
 </html>
