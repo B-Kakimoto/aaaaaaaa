@@ -116,7 +116,7 @@ iframe {
 }
 
 .cover-home {
-  background-image: url(images/cover-home-s.webp);
+  background-image: url(/images/cover-home-s.webp);
 }
 
 .about {
@@ -129,15 +129,15 @@ iframe {
 }
 
 .cover-news {
-  background-image: url(images/cover-news-s.webp);
+  background-image: url(/images/cover-news-s.webp);
 }
 
 .cover-menu {
-  background-image: url(images/cover-menu-s.webp);
+  background-image: url(/images/cover-menu-s.webp);
 }
 
 .cover-contact {
-  background-image: url(images/cover-contact-s.webp);
+  background-image: url(/images/cover-contact-s.webp);
 }
 
 .location {
@@ -238,7 +238,7 @@ iframe {
 }
 
 .page-footer {
-  background-image: url(images/footer-s.webp);
+  background-image: url(/images/footer-s.webp);
   background-size: cover;
   background-position: center;
   padding-top: 12rem;
@@ -296,19 +296,19 @@ iframe {
     margin-bottom: 6rem;
   }
   .cover-home {
-    background-image: url(images/cover-home-l.webp);
+    background-image: url(/images/cover-home-l.webp);
   }
   .about {
     margin: 4rem auto 0;
   }
   .cover-news {
-    background-image: url(images/cover-news-l.webp);
+    background-image: url(/images/cover-news-l.webp);
   }
   .cover-menu {
-    background-image: url(images/cover-menu-l.webp);
+    background-image: url(/images/cover-menu-l.webp);
   }
   .cover-contact {
-    background-image: url(images/cover-contact-l.webp);
+    background-image: url(/images/cover-contact-l.webp);
   }
   .grid {
     gap: 3rem 2rem;
@@ -321,7 +321,7 @@ iframe {
     font-size: 1rem;
   }
   .cover-contact {
-    background-image: url(images/cover-contact-l.webp);
+    background-image: url(/images/cover-contact-l.webp);
   }
   .location {
     display: flex;
@@ -376,7 +376,7 @@ iframe {
     order: 1;
   }
   .page-footer {
-    background-image: url(images/footer-l.webp);
+    background-image: url(/images/footer-l.webp);
     padding-top: 12rem;
   }
   .info th {
