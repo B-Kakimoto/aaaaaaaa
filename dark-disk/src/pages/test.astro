@@ -1,5 +1,7 @@
 ---
 import '../styles/style.scss';
+
+import Layout from '../Layouts/Layout.astro';
 ---
 
 <html lang="ja">
@@ -9,12 +11,14 @@ import '../styles/style.scss';
   <title>外部SCSSのテスト</title>
 </head>
 <body>
-  <div class="box">
-    <p>SCSSを使います</p>
-  </div>
-  <p>ここは黒です</p>
-  <p>テストリンク<a href="/">INDEX-TOP</a></p>
-  <p>テストリンク<a href="/index2">INDEX2</a></p>
-  <p>テストリンク<a href="/footer-test">footer-studying</a></p>
+  <Layout>
+    <div class="box">
+      <p>SCSSを使います</p>
+    </div>
+    <p>ここは黒です</p>
+    <p>テストリンク<a href="/">INDEX-TOP</a></p>
+    <p>テストリンク<a href="/index2">INDEX2</a></p>
+    <p>テストリンク<a href="/footer-test">footer-studying</a></p>
+  </Layout>
 </body>
 </html>

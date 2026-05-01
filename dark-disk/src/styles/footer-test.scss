@@ -5,35 +5,68 @@
 
     footer {
         display: flex;
-        justify-content: space-between;
-    }
-
-    #main {
-        display: block;
-        .Headline {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            a {
-                text-decoration: none;
-            }
-            .icon {
-                padding: 0;
-                line-height: 1px;
-                list-style: none;
+        justify-content: center;
+        margin-top: 60px;
+        #main {
+            width: 40%;
+            display: block;
+            margin-right: 2rem;
+            .Headline {
                 display: flex;
-                
+                justify-content: space-between;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                }
+                .icon {
+                    padding: 0;
+                    line-height: 1px;
+                    list-style: none;
+                    display: flex;
+                    li {
+                        display: block;
+                        &:last-child {
+                            padding-left: 10px;
+                            padding-right: 30px;
+                        }
+                    }
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                } 
+            }
+            .item {
+                margin-bottom: 8rem;
+            }
+            .Copyright {
+                font-size: 0.8rem;
+            }
+        }
+        #sidebar {
+            width: 15%;
+            display: block;
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            .text-list {
+                display: block;
                 li {
+                    padding-top: 10px;
+                }
+            }
+            .Company-List {
+                li {
+                    width: 210px;
                     display: block;
-                    &:last-child {
-                        padding-left: 10px;
+                    border-bottom: 1px solid black;
+                    padding: 15px 0;
+                    &:nth-child(2) {
+                        padding: 25px 0;                    
                     }
                 }
-                img {
-                    width: 30px;
-                    height: 30px;
-                }
-            } 
+            }
         }
     }
 }
