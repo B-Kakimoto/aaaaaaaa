@@ -1,0 +1,36 @@
+@media (min-width: 1024px) {
+  img {
+    max-width: 100%;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  #main {
+    display: block;
+  }
+  #main .Headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #main .Headline a {
+    text-decoration: none;
+  }
+  #main .Headline .icon {
+    padding: 0;
+    line-height: 1px;
+    list-style: none;
+    display: flex;
+  }
+  #main .Headline .icon li {
+    display: block;
+  }
+  #main .Headline .icon li:last-child {
+    padding-left: 10px;
+  }
+  #main .Headline .icon img {
+    width: 30px;
+    height: 30px;
+  }
+}/*# sourceMappingURL=footer-test.css.map */

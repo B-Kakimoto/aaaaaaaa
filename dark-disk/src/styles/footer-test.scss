@@ -1,0 +1,40 @@
+@media (min-width :1024px) {
+    img {
+        max-width: 100%;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #main {
+        display: block;
+        .Headline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                text-decoration: none;
+            }
+            .icon {
+                padding: 0;
+                line-height: 1px;
+                list-style: none;
+                display: flex;
+                
+                li {
+                    display: block;
+                    &:last-child {
+                        padding-left: 10px;
+                    }
+                }
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            } 
+        }
+    }
+}
+
