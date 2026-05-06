@@ -2,6 +2,7 @@
 import '../styles/style.scss';
 
 import Layout from '../Layouts/Layout.astro';
+import Button from '../components/Button.astro';
 ---
 
 <html lang="ja">
@@ -18,7 +19,15 @@ import Layout from '../Layouts/Layout.astro';
     <p>ここは黒です</p>
     <p>テストリンク<a href="/">INDEX-TOP</a></p>
     <p>テストリンク<a href="/index2">INDEX2</a></p>
-    <p>テストリンク<a href="/footer-test">footer-studying</a></p>
+    <p>テストリンク<a href="/footer-test">footer-studying</a>
+
+      <section class="components__block">
+        <h2>Button</h2>
+        <div class="components__preview">
+          <Button />
+        </div>
+      </section></p>
+
   </Layout>
 </body>
 </html>

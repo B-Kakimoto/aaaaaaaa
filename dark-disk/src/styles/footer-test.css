@@ -4,33 +4,66 @@
   }
   footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 60px;
   }
-  #main {
+  footer #main {
+    width: 40%;
     display: block;
+    margin-right: 2rem;
   }
-  #main .Headline {
+  footer #main .Headline {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  #main .Headline a {
+  footer #main .Headline a {
     text-decoration: none;
   }
-  #main .Headline .icon {
+  footer #main .Headline .icon {
     padding: 0;
     line-height: 1px;
     list-style: none;
     display: flex;
   }
-  #main .Headline .icon li {
+  footer #main .Headline .icon li {
     display: block;
   }
-  #main .Headline .icon li:last-child {
+  footer #main .Headline .icon li:last-child {
     padding-left: 10px;
+    padding-right: 30px;
   }
-  #main .Headline .icon img {
+  footer #main .Headline .icon img {
     width: 30px;
     height: 30px;
+  }
+  footer #main .item {
+    margin-bottom: 8rem;
+  }
+  footer #main .Copyright {
+    font-size: 0.8rem;
+  }
+  footer #sidebar {
+    width: 15%;
+    display: block;
+  }
+  footer #sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  footer #sidebar .text-list {
+    display: block;
+  }
+  footer #sidebar .text-list li {
+    padding-top: 10px;
+  }
+  footer #sidebar .Company-List li {
+    width: 210px;
+    display: block;
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+  }
+  footer #sidebar .Company-List li:nth-child(2) {
+    padding: 25px 0;
   }
 }/*# sourceMappingURL=footer-test.css.map */
