@@ -1,13 +1,15 @@
 .btn {
   display: inline-block;
-  background: #9D9087;
-  color: #fff;
+  color: #9D9087;
+  border: 1px solid #9D9087;
   padding: 12px 30px;
-  border: none;
-  border-radius: 6px;
+  border-radius: 25px;
   text-decoration: none;
+  transition: 0.5s;
   cursor: pointer;
 }
 .btn:hover {
-  opacity: 0.7;
-}/*# sourceMappingURL=Button.css.map */
+  background: #9D9087;
+  border: 1px solid #9D9087;
+  color: #fff;
+}/*# sourceMappingURL=button.css.map */
