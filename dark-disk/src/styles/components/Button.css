@@ -1,0 +1,13 @@
+.btn {
+  display: inline-block;
+  background: #9D9087;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.7;
+}/*# sourceMappingURL=Button.css.map */

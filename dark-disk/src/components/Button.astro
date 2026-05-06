@@ -1,0 +1,11 @@
+---
+// src/components/Button.astro
+
+import '../styles/components/Button.scss';
+
+const { href = "#" } = Astro.props;
+---
+
+<a href={href}class="btn">
+  <slot />
+</a>
