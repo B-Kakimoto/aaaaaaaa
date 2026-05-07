@@ -71,4 +71,47 @@
         }
     }
 }
+@media (max-width :1024px){
+    img {
+        max-width: 100%;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        background-color: rgb(239, 239, 239);
+        #main {
+            width: 40%;
+            display: block;
+            margin-right: 2rem;
+            .Headline {
+                display: flex;
+                flex-direction: column-reverse;
+                .text-icon-button {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+                a {
+                    text-decoration: none;
+                }
+                .icon {
+                    padding: 0;
+                    line-height: 1px;
+                    list-style: none;
+                    display: flex;
+                    li {
+                        display: block;
+                        &:last-child {
+
+                        }
+                    }
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
 
