@@ -1,5 +1,23 @@
+@use './mixins.scss' as *;
+
 .box {
     p {
       color: red;
     }
   }
+
+.pc-only {
+  display: block;
+
+  @include mq('max-lg') {
+    display: none;
+  }
+}
+
+.sp-only {
+  display: none;
+
+  @include mq('max-lg') {
+    display: block;
+  }
+}
