@@ -1,15 +1,31 @@
-@media (min-width :1024px) {
-    img {
-        max-width: 100%;
+@use './mixins.scss' as *;
+
+img {
+    max-width: 100%;
+}
+
+.pc-only {
+    display: block;
+
+    @include mq('max-lg') {
+        display: none;
+    }    
+}
+
+.sp-only {
+    display: none;
+
+    @include mq('max-lg') {
+        display: block;
     }
+}
 
     footer {
         display: flex;
         justify-content: center;
-        margin-top: 60px;
         background-color: rgb(239, 239, 239);
         #main {
-            width: 40%;
+            width: 50%;
             display: block;
             margin-right: 2rem;
             .Headline {
@@ -31,7 +47,7 @@
                     li {
                         display: block;
                         &:last-child {
-                            padding-left: 10px;
+                            padding-left: 1rem;
                             padding-right: 7rem;
                         }
                     }
@@ -43,6 +59,7 @@
             }
             .item {
                 margin-bottom: 8rem;
+                display: block;
             }
             .Copyright {
                 font-size: 0.8rem;
@@ -74,49 +91,116 @@
             }
         }
     }
-}
-@media (max-width :1024px){
+
+
+@media (max-width :1023px){
     img {
         max-width: 100%;
     }
-    footer {
-        display: flex;
-        justify-content: center;
-        margin-top: 60px;
-        background-color: rgb(239, 239, 239);
-        #main {
-            width: 40%;
+
+    a {
+        text-decoration: none;
+    }
+    
+    .pc-only {
+        display: block;
+
+        @include mq('max-lg') {
+            display: none;
+        }
+    }
+
+    .sp-only {
+        display: none;
+
+        @include mq('max-lg') {
             display: block;
-            margin-right: 2rem;
-            .Headline {
+        }
+    }
+    
+    footer {
+        background-color: rgb(239, 239, 239);
+        flex-direction: column;
+        #main {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            .Headline-sp {
                 display: flex;
-                flex-direction: column-reverse;
-                .text-icon-button {
-                    display: flex;
-                    flex-direction: column-reverse;
+                flex-direction: column;
+                H1 {
+                    text-align: center;
                 }
-                a {
-                    text-decoration: none;
+                nav {
+                    a {
+                        color: #000000;
+                    }
                 }
-                .icon {
-                    padding: 0;
-                    line-height: 1px;
-                    list-style: none;
+                .item-sp {
+                    width: 80%;
+                    margin: 0 auto;
                     display: flex;
-                    li {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 0.5rem;
+                }
+                .column-text {
+                    text-align: center;
+                    .text-icon-button {
+                        display: flex;
+                        align-items: center;
+                    }
+                    .icon-sp {
+                        display: flex;
+                        margin-top: 4rem;
+                        justify-content: center;
+                        line-height: 1px;
+                        list-style: none;
+                        li {
+                            display: flex;
+                            &:last-child {
+                                padding-left: 1rem;
+                            }
+                        }
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    } 
+                    .text-list {
                         display: block;
-                        &:last-child {
-                            padding-left: 10px;
-                            padding-right: 7rem;
+                        li {
+                            padding-top: 10px;
                         }
                     }
-                    img {
-                        width: 30px;
-                        height: 30px;
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                    }
+                }    
+            }
+        }
+        #CC-List {
+            width: 100%;
+            display: block;
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            .Company-List-sp {
+                text-align: center;
+                li {
+                    display: block;
+                    padding: 15px 0;
+                    &:nth-child(1) {
+                        border-bottom: 1px solid black;
                     }
                 }
+            }
+            .Copyright-sp {
+                text-align: center;
+                font-size: 0.8rem;
             }
         }
     }
 }
-
