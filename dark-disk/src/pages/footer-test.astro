@@ -12,45 +12,89 @@ import Button from '../components/Button.astro';
     <body>
         <footer>
             <div id="main">
-                <div class="Headline">
-                    <h1><a href="/">YONEDA HOTEL GROUP</a></h1>
-                    <div class="text-icon-button">
-                        <ul class="icon">
-                            <li><img src="/SVG/Instagram.svg" alt="instagram"></li>
-                            <li><img src="/SVG/LINE.svg" alt="LINE"></li>
-                        </ul>
+                <div class="pc-only">
+                    <div class="Headline">
+                        <h1><a href="/">YONEDA HOTEL GROUP</a></h1>
+                        <div class="text-icon-button">
+                            <ul class="icon">
+                                <li><img src="/SVG/Instagram.svg" alt="instagram"></li>
+                                <li><img src="/SVG/LINE.svg" alt="LINE"></li>
+                            </ul>
+                            <nav>
+                                <a href="/jp">JP</a>
+                                <span>｜</span>
+                                <a href="/en">EN</a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <Button href="#">itoshima810</Button>
+                        <Button href="#">itoshima808</Button>
+                        <Button href="#">Tamagawa4</Button>
+                        <Button href="#">Okusu3</Button>
+                        <Button href="#">Reserve<span>｜</span>予約</Button>
+                    </div>
+                    <div class="Copyright">
+                        <p>Copyright &copy; YONEDA HOTEL GROUP All Rights Reserved.</p>
+                        <p>PRIVACY POLICY</p>
+                    </div>
+                </div>
+
+                <div class="sp-only">
+                    <div class="Headline-sp">
                         <nav>
                             <a href="/jp">JP</a>
                             <span>｜</span>
                             <a href="/en">EN</a>
                         </nav>
+                        <h1><a href="/">YONEDA HOTEL GROUP</a></h1>
+                        <div class="item-sp">
+                            <Button href="#">itoshima810</Button>
+                            <Button href="#">itoshima808</Button>
+                            <Button href="#">Tamagawa4</Button>
+                            <Button href="#">Okusu3</Button>
+                            <Button href="#">Reserve<span>｜</span>予約</Button>
+                        </div>
+                        <div class="column-text">
+                            <div class="text-icon-button-sp">
+                                <ul class="icon-sp">
+                                    <li><img src="/SVG/Instagram.svg" alt="instagram"></li>
+                                    <li><img src="/SVG/LINE.svg" alt="LINE"></li>
+                                </ul>
+                            </div>
+                            <ul class="text-list">
+                                <li>ABOUT</li>
+                                <li>PROJECT</li>
+                                <li>CONTACT</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="item">
-                    <Button href="#">itoshima810</Button>
-                    <Button href="#">itoshima808</Button>
-                    <Button href="#">Tamagawa4</Button>
-                    <Button href="#">Okusu3</Button>
-                    <Button href="#">Reserve<span>｜</span>予約</Button>
-                </div>
-                <div class="Copyright">
-                    <p>Copyright &copy; YONEDA HOTEL GROUP All Rights Reserved.</p>
-                    <p>PRIVACY POLICY</p>
                 </div>
             </div>
 
             <aside id="sidebar">
-                <ul class="text-list">
-                    <li>ABOUT</li>
-                    <li>PROJECT</li>
-                    <li>CONTACT</li>
-                </ul>
-                <ul class="Company-List">
-                    <li>ホテルづくりをお考えの方へ</li>
-                    <li>米田建築工房</li>
-                    <li>設計部門<br>TRUNK DESIGN OFFICE</li>
-                </ul>
+                <div class="pc-only">
+                    <ul class="Company-List">
+                        <li>ホテルづくりをお考えの方へ</li>
+                        <li>米田建築工房</li>
+                        <li>設計部門<br>TRUNK DESIGN OFFICE</li>
+                    </ul>
+                </div>                
             </aside>
+
+            <div id="CC-List">
+                <div class="sp-only">
+                    <ul class="Company-List-sp">
+                        <li>ホテルづくりをお考えの方へ</li>
+                        <li>米田建築工房</li>
+                        <li>設計部門<br>TRUNK DESIGN OFFICE</li>
+                    </ul>
+                    <div class="Copyright-sp">
+                        <p>Copyright &copy; YONEDA HOTEL GROUP All Rights Reserved.</p>
+                        <p>PRIVACY POLICY</p>
+                    </div>
+                </div>                
+            </div>
         </footer>
         <p>テストリンク<a href="/test">TEST</a></p>
         <p>テストリンク<a href="/">index</a></p>

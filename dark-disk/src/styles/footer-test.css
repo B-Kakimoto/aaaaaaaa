@@ -2,6 +2,26 @@
   img {
     max-width: 100%;
   }
+  .pc-only {
+    display: block;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1023px) {
+  .pc-only {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .sp-only {
+    display: none;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1023px) {
+  .sp-only {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
   footer {
     display: flex;
     justify-content: center;
@@ -72,47 +92,89 @@
     padding: 25px 0;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   img {
     max-width: 100%;
   }
+  .pc-only {
+    display: none;
+  }
+}
+@media (max-width: 1023px) and (max-width: 1023px) {
+  .pc-only {
+    display: block;
+  }
+}
+@media (max-width: 1023px) {
+  .sp-only {
+    display: block;
+  }
+}
+@media (max-width: 1023px) and (max-width: 1023px) {
+  .sp-only {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
   footer {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
     background-color: rgb(239, 239, 239);
   }
   footer #main {
     width: 40%;
     display: block;
-    margin-right: 2rem;
+    margin: 0 auto;
   }
-  footer #main .Headline {
+  footer #main .Headline-sp {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
-  footer #main .Headline .text-icon-button {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  footer #main .Headline a {
+  footer #main .Headline-sp a {
     text-decoration: none;
   }
-  footer #main .Headline .icon {
+  footer #main .Headline-sp .icon {
     padding: 0;
     line-height: 1px;
     list-style: none;
     display: flex;
   }
-  footer #main .Headline .icon li {
+  footer #main .Headline-sp .icon li {
     display: block;
   }
-  footer #main .Headline .icon li:last-child {
+  footer #main .Headline-sp .icon li:last-child {
     padding-left: 10px;
     padding-right: 7rem;
   }
-  footer #main .Headline .icon img {
+  footer #main .Headline-sp .icon img {
     width: 30px;
     height: 30px;
+  }
+  footer #main .item {
+    margin-bottom: 8rem;
+  }
+  footer #main .Copyright {
+    font-size: 0.8rem;
+  }
+  footer #sidebar {
+    width: 15%;
+    display: block;
+  }
+  footer #sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  footer #sidebar .text-list {
+    display: block;
+  }
+  footer #sidebar .text-list li {
+    padding-top: 10px;
+  }
+  footer #sidebar .Company-List li {
+    width: 210px;
+    display: block;
+    border-bottom: 1px solid black;
+    padding: 15px 0;
+  }
+  footer #sidebar .Company-List li:nth-child(2) {
+    padding: 25px 0;
   }
 }/*# sourceMappingURL=footer-test.css.map */
