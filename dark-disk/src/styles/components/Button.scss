@@ -1,16 +1,59 @@
-.btn {
-  display: inline-block;
-  color: #9D9087;
-  border: 1px solid #9D9087;
-  padding: 12px 30px;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: 0.5s;
-  cursor: pointer;
+@use "../mixins" as *;
 
-  &:hover {
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 1.5rem 10rem;
+  width: 30rem;
+  height: 2rem;
+  border: none;
+  border-radius: 2.5rem;
+  text-decoration: none;
+  transition: transform 0.3s;
+
+  
+  // 背景あり
+  &--primary {
     background: #9D9087;
-    border: 1px solid #9D9087;
     color: #fff;
+
+    &:hover{
+      transform: scale(1.05);
+    }
   }
+
+  // 背景なし
+  &--outline {
+    border: 1px solid #000;
+    color: #000;
+    background: transparent;
+
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+
+  @include mq('max-lg') {
+    width: 45rem;
+    height: 6rem;
+  }
+
 }
+    
+// .btn {
+//   display: inline-block;
+//   color: #9D9087;
+//   border: 1px solid #9D9087;
+//   padding: 12px 30px;
+//   border-radius: 25px;
+//   text-decoration: none;
+//   transition: 0.5s;
+//   cursor: pointer;
+
+//   &:hover {
+//     background: #9D9087;
+//     border: 1px solid #9D9087;
+//     color: #fff;
+//   }
+// }
