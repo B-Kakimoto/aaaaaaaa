@@ -131,7 +131,6 @@ a {
                     }
                 }
             }
-            
         }
     }
 
@@ -530,3 +529,103 @@ a {
 //         }
 //     }
 // }
+
+
+//** Basic-Astroでコメントアウトしたコード  **//
+
+
+            // .Headline {
+            //     width: 100%;
+            //     align-items: center;
+            //     padding-bottom: 3rem;
+            //     .text-icon-button {
+            //         width: 100%;
+            //         display: flex;
+            //         justify-content: space-between;
+            //         align-items: center;
+            //         .footer-h1 {
+            //             white-space: nowrap;
+            //             font-size: clamp(1.8rem, 3vw, 3.2rem);
+            //         }
+            //         a {
+            //             text-decoration: none;
+            //         }
+            //         .icon {
+            //             padding: 0;
+            //             line-height: 1px;
+            //             list-style: none;
+            //             display: flex;
+            //             li {
+            //                 display: block;
+            //                 &:last-child {
+            //                     padding-left: 1rem;
+            //                 }
+            //             }
+            //             img {
+            //                 width: 30px;
+            //                 height: 30px;
+            //             }
+            //         } 
+            //         nav {
+            //             display: flex;
+            //             justify-content: flex-end;
+            //         }
+            //     }
+            // }
+            // .item {
+            //     display: flex;
+            //     gap: 10px;
+            //     a {
+            //         width: 16rem;
+            //         background-color: rgb(239, 239, 239);
+            //         color: #9D9087;
+            //         border: 1px solid #9D9087;
+            //         transition: 0.5s;
+            //         cursor: pointer;
+            //         &:hover {
+            //             background-color: $Background-brown;
+            //             border: 1px solid $Background-brown;
+            //             color: #fff;
+            //         }
+            //         &:last-child {
+            //             width: 26rem;
+            //             background-color: $Background-brown;
+            //             border: 1px solid $Background-brown;
+            //             color: #fff;
+            //             &:hover {
+            //                 background-color: rgb(239, 239, 239);
+            //                 color: $Background-brown;
+            //                 border: 1px solid $Background-brown;
+            //             }
+            //         }
+            //     }
+            // }
+            // .Copyright {
+            //     margin-top: 16rem;
+            //     font-size: 1.2rem;
+            //     vertical-align: bottom;
+            // }
+
+            // .text-list {
+            //     vertical-align: bottom;
+            //     font-size: 1.5rem;
+            //     margin-bottom: 5rem;
+            //     a {
+            //         display: inline-block;
+            //         line-height: 1;
+            //     }
+            //     li {
+            //         padding-top: 10px;
+            //     }
+            // }
+            // .Company-List {
+            //     li {
+            //         width: 210px;
+            //         display: block;
+            //         border-bottom: 1px solid black;
+            //         padding: 15px 0;
+            //         &:nth-child(2) {
+            //             padding: 25px 0;                    
+            //         }
+            //     }
+            // }
