@@ -1,0 +1,66 @@
+@use './mixins.scss' as *;
+
+body {
+    font-family: serif;
+}
+img {
+    max-width: 100%;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}
+.pc-only {
+    display: block;
+
+    @include mq('max-lg') {
+        display: none;
+    }    
+}
+
+.sp-only {
+    display: none;
+
+    @include mq('max-lg') {
+        display: block;
+    }
+}
+
+main {
+    background-color: rgb(239, 239, 239);
+    .mainvisual {
+        .mainvisual1 {
+            height: 1280px;
+            background-image: url(/images/1-mainvisual-2.webp);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .heading {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 auto;
+                height: 800px;
+                text-align: center;
+                color: white;
+                h1 {
+                    letter-spacing: 0.4em;
+                    line-height: 1.5;
+                }
+            }
+            .gradation {
+                color: white;
+                text-align: center;
+                p {
+                    letter-spacing: 0.1em;
+                    line-height: 4;
+                    font-size: 20px;
+                }
+            }
+        }
+        .mainvisual2 {
+            height: 3467px;
+            background-image: url(/images/1-mainvisual-3.webp);
+        }
+    }
+}
