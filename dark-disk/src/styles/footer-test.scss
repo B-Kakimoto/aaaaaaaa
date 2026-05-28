@@ -1,264 +1,310 @@
-@use './mixins.scss' as *;
+@use './mixins.scss'as *;
 
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
-a {
-    color: #000000;
-    text-decoration: none;
-}
-.pc-only {
-    display: block;
 
-    @include mq('max-lg') {
-        display: none;
-    }    
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.pc-only {
+	display: block;
+
+	@include mq('max-lg') {
+		display: none;
+	}
 }
 
 .sp-only {
-    display: none;
+	display: none;
 
-    @include mq('max-lg') {
-        display: block;
-    }
+	@include mq('max-lg') {
+		display: block;
+	}
 }
 
-    footer {
-        display: flex;
-        justify-content: center;
-        background-color: rgb(239, 239, 239);
-        padding-top: 10rem;
-        #main {
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            margin-right: 8rem;
-            .upco-flex {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: 400px;
-                .up {
-                    .Headline {
-                        width: 100%;
-                        align-items: center;
-                        padding-bottom: 2rem;
-                        .text-icon-button {
-                            width: 100%;
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            .icon {
-                                padding: 0;
-                                line-height: 1px;
-                                list-style: none;
-                                display: flex;
-                                li {
-                                    display: block;
-                                    &:last-child {
-                                        padding-left: 1rem;
-                                    }
-                                }
-                                img {
-                                    width: 30px;
-                                    height: 30px;
-                                }
-                            } 
-                            nav {
-                                justify-content: flex-end;
-                            }
-                        }
-                    }
-                    .item {
-                        display: flex;
-                        gap: 10px;
-                        a {
-                            width: 16rem;
-                            background: rgb(239, 239, 239);
-                            color: #9D9087;
-                            border: 1px solid #9D9087;
-                            transition: 0.5s;
-                            cursor: pointer;
-                            &:hover {
-                                background: #9D9087;
-                                border: 1px solid #9D9087;
-                                color: #fff;
-                            }
-                            &:last-child {
-                                width: 26rem;
-                            }
-                        }
-                    }
-                }
-                .Copyright {
-                    font-size: 1.2rem;
-                    vertical-align: bottom;
-                }
-            }
-        }
-        #sidebar {
-            width: 15%;
-            display: block;
-            .a {
-                a {
-                    text-decoration: none;
-                }
-            }
-            ul {
-                list-style: none;
-                padding: 0;
-            }
-            .TC-List {
-                display: flex;
-                height: 400px;
-                flex-direction: column;
-                justify-content: space-between;
-                .text-list {
-                    vertical-align: bottom;
-                    li {
-                        padding-top: 10px;
-                    }
-                }
-                .Company-List {
-                    li {
-                        width: 210px;
-                        display: block;
-                        border-bottom: 1px solid black;
-                        padding: 15px 0;
-                        &:nth-child(2) {
-                            padding: 25px 0;                    
-                        }
-                    }
-                }
-            }
-        }
-    }
+footer {
+	display: flex;
+	justify-content: center;
+	background-color: rgb(239, 239, 239);
+	padding-top: 10rem;
+
+	#main {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		margin-right: 8rem;
+
+		.upco-flex {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 400px;
+
+			.up {
+				.Headline {
+					width: 100%;
+					align-items: center;
+					padding-bottom: 2rem;
+
+					.text-icon-button {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+
+						.icon {
+							padding: 0;
+							line-height: 1px;
+							list-style: none;
+							display: flex;
+
+							li {
+								display: block;
+
+								&:last-child {
+									padding-left: 1rem;
+								}
+							}
+
+							img {
+								width: 30px;
+								height: 30px;
+							}
+						}
+
+						nav {
+							justify-content: flex-end;
+						}
+					}
+				}
+
+				.item {
+					display: flex;
+					gap: 10px;
+
+					a {
+						width: 16rem;
+						background: rgb(239, 239, 239);
+						color: #9D9087;
+						border: 1px solid #9D9087;
+						transition: 0.5s;
+						cursor: pointer;
+
+						&:hover {
+							background: #9D9087;
+							border: 1px solid #9D9087;
+							color: #fff;
+						}
+
+						&:last-child {
+							width: 26rem;
+						}
+					}
+				}
+			}
+
+			.Copyright {
+				font-size: 1.2rem;
+				vertical-align: bottom;
+			}
+		}
+	}
+
+	#sidebar {
+		width: 15%;
+		display: block;
+
+		.a {
+			a {
+				text-decoration: none;
+			}
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		.TC-List {
+			display: flex;
+			height: 400px;
+			flex-direction: column;
+			justify-content: space-between;
+
+			.text-list {
+				vertical-align: bottom;
+
+				li {
+					padding-top: 10px;
+				}
+			}
+
+			.Company-List {
+				li {
+					width: 210px;
+					display: block;
+					border-bottom: 1px solid black;
+					padding: 15px 0;
+
+					&:nth-child(2) {
+						padding: 25px 0;
+					}
+				}
+			}
+		}
+	}
+}
 
 
-@media (max-width :1023px){
-    img {
-        max-width: 100%;
-    }
+@media (max-width :1023px) {
+	img {
+		max-width: 100%;
+	}
 
-    a {
-        text-decoration: none;
-    }
-    
-    .pc-only {
-        display: block;
+	a {
+		text-decoration: none;
+	}
 
-        @include mq('max-lg') {
-            display: none;
-        }
-    }
+	.pc-only {
+		display: block;
 
-    .sp-only {
-        display: none;
+		@include mq('max-lg') {
+			display: none;
+		}
+	}
 
-        @include mq('max-lg') {
-            display: block;
-        }
-    }
-    
-    footer {
-        background-color: rgb(239, 239, 239);
-        flex-direction: column;
-        #main {
-            height: 100%;
-            width: 100%;
-            display: block;
-            margin: 0 auto;
-            .Headline-sp {
-                display: flex;
-                flex-direction: column;
-                H1 {
-                    text-align: center;
-                }
-                nav {
-                    a {
-                        color: #000000;
-                    }
-                }
-                .item-sp {
-                    margin: 0 auto;
-                    display: flex;
-                    flex-direction: column;
-                    text-align: center;
-                    gap: 2rem;
-                    a {
-                        width: 26rem;
-                        background: rgb(239, 239, 239);
-                        color: #9D9087;
-                        border: 1px solid #9D9087;
-                        transition: 0.5s;
-                        cursor: pointer;
-                        &:hover {
-                            background: #9D9087;
-                            border: 1px solid #9D9087;
-                            color: #fff;
-                        }
-                    }
-                }
-                .column-text {
-                    text-align: center;
-                    .text-icon-button {
-                        display: flex;
-                        align-items: center;
-                    }
-                    .icon-sp {
-                        display: flex;
-                        margin-top: 4rem;
-                        justify-content: center;
-                        line-height: 1px;
-                        list-style: none;
-                        li {
-                            display: flex;
-                            &:last-child {
-                                padding-left: 1rem;
-                            }
-                        }
-                        img {
-                            width: 30px;
-                            height: 30px;
-                        }
-                    } 
-                    .text-list {
-                        display: block;
-                        li {
-                            padding-top: 10px;
-                        }
-                    }
-                    ul {
-                        list-style: none;
-                        padding: 0;
-                    }
-                }    
-            }
-        }
-        #CC-List {
-            width: 100%;
-            display: block;
-            padding-bottom: 2rem;
-            ul {
-                list-style: none;
-                padding: 0;
-            }
-            .Company-List-sp {
-                text-align: center;
-                li {
-                    display: block;
-                    padding: 15px 0;
-                    &:nth-child(1) {
-                        border-bottom: 1px solid black;
-                    }
-                }
-            }
-            .Copyright-sp {
-                text-align: center;
-                font-size: 0.8rem;
-            }
-        }
-    }
+	.sp-only {
+		display: none;
+
+		@include mq('max-lg') {
+			display: block;
+		}
+	}
+
+	footer {
+		background-color: rgb(239, 239, 239);
+		flex-direction: column;
+
+		#main {
+			height: 100%;
+			width: 100%;
+			display: block;
+			margin: 0 auto;
+
+			.Headline-sp {
+				display: flex;
+				flex-direction: column;
+
+				H1 {
+					text-align: center;
+				}
+
+				nav {
+					a {
+						color: #000000;
+					}
+				}
+
+				.item-sp {
+					margin: 0 auto;
+					display: flex;
+					flex-direction: column;
+					text-align: center;
+					gap: 2rem;
+
+					a {
+						width: 26rem;
+						background: rgb(239, 239, 239);
+						color: #9D9087;
+						border: 1px solid #9D9087;
+						transition: 0.5s;
+						cursor: pointer;
+
+						&:hover {
+							background: #9D9087;
+							border: 1px solid #9D9087;
+							color: #fff;
+						}
+					}
+				}
+
+				.column-text {
+					text-align: center;
+
+					.text-icon-button {
+						display: flex;
+						align-items: center;
+					}
+
+					.icon-sp {
+						display: flex;
+						margin-top: 4rem;
+						justify-content: center;
+						line-height: 1px;
+						list-style: none;
+
+						li {
+							display: flex;
+
+							&:last-child {
+								padding-left: 1rem;
+							}
+						}
+
+						img {
+							width: 30px;
+							height: 30px;
+						}
+					}
+
+					.text-list {
+						display: block;
+
+						li {
+							padding-top: 10px;
+						}
+					}
+
+					ul {
+						list-style: none;
+						padding: 0;
+					}
+				}
+			}
+		}
+
+		#CC-List {
+			width: 100%;
+			display: block;
+			padding-bottom: 2rem;
+
+			ul {
+				list-style: none;
+				padding: 0;
+			}
+
+			.Company-List-sp {
+				text-align: center;
+
+				li {
+					display: block;
+					padding: 15px 0;
+
+					&:nth-child(1) {
+						border-bottom: 1px solid black;
+					}
+				}
+			}
+
+			.Copyright-sp {
+				text-align: center;
+				font-size: 0.8rem;
+			}
+		}
+	}
 }
 
 // @use './mixins.scss' as *;
@@ -412,7 +458,7 @@ a {
 //     a {
 //         text-decoration: none;
 //     }
-    
+
 //     .pc-only {
 //         display: block;
 
@@ -428,7 +474,7 @@ a {
 //             display: block;
 //         }
 //     }
-    
+
 //     footer {
 //         background-color: rgb(239, 239, 239);
 //         flex-direction: column;
@@ -534,98 +580,98 @@ a {
 //** Basic-Astroでコメントアウトしたコード  **//
 
 
-            // .Headline {
-            //     width: 100%;
-            //     align-items: center;
-            //     padding-bottom: 3rem;
-            //     .text-icon-button {
-            //         width: 100%;
-            //         display: flex;
-            //         justify-content: space-between;
-            //         align-items: center;
-            //         .footer-h1 {
-            //             white-space: nowrap;
-            //             font-size: clamp(1.8rem, 3vw, 3.2rem);
-            //         }
-            //         a {
-            //             text-decoration: none;
-            //         }
-            //         .icon {
-            //             padding: 0;
-            //             line-height: 1px;
-            //             list-style: none;
-            //             display: flex;
-            //             li {
-            //                 display: block;
-            //                 &:last-child {
-            //                     padding-left: 1rem;
-            //                 }
-            //             }
-            //             img {
-            //                 width: 30px;
-            //                 height: 30px;
-            //             }
-            //         } 
-            //         nav {
-            //             display: flex;
-            //             justify-content: flex-end;
-            //         }
-            //     }
-            // }
-            // .item {
-            //     display: flex;
-            //     gap: 10px;
-            //     a {
-            //         width: 16rem;
-            //         background-color: rgb(239, 239, 239);
-            //         color: #9D9087;
-            //         border: 1px solid #9D9087;
-            //         transition: 0.5s;
-            //         cursor: pointer;
-            //         &:hover {
-            //             background-color: $Background-brown;
-            //             border: 1px solid $Background-brown;
-            //             color: #fff;
-            //         }
-            //         &:last-child {
-            //             width: 26rem;
-            //             background-color: $Background-brown;
-            //             border: 1px solid $Background-brown;
-            //             color: #fff;
-            //             &:hover {
-            //                 background-color: rgb(239, 239, 239);
-            //                 color: $Background-brown;
-            //                 border: 1px solid $Background-brown;
-            //             }
-            //         }
-            //     }
-            // }
-            // .Copyright {
-            //     margin-top: 16rem;
-            //     font-size: 1.2rem;
-            //     vertical-align: bottom;
-            // }
+// .Headline {
+//     width: 100%;
+//     align-items: center;
+//     padding-bottom: 3rem;
+//     .text-icon-button {
+//         width: 100%;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         .footer-h1 {
+//             white-space: nowrap;
+//             font-size: clamp(1.8rem, 3vw, 3.2rem);
+//         }
+//         a {
+//             text-decoration: none;
+//         }
+//         .icon {
+//             padding: 0;
+//             line-height: 1px;
+//             list-style: none;
+//             display: flex;
+//             li {
+//                 display: block;
+//                 &:last-child {
+//                     padding-left: 1rem;
+//                 }
+//             }
+//             img {
+//                 width: 30px;
+//                 height: 30px;
+//             }
+//         } 
+//         nav {
+//             display: flex;
+//             justify-content: flex-end;
+//         }
+//     }
+// }
+// .item {
+//     display: flex;
+//     gap: 10px;
+//     a {
+//         width: 16rem;
+//         background-color: rgb(239, 239, 239);
+//         color: #9D9087;
+//         border: 1px solid #9D9087;
+//         transition: 0.5s;
+//         cursor: pointer;
+//         &:hover {
+//             background-color: $Background-brown;
+//             border: 1px solid $Background-brown;
+//             color: #fff;
+//         }
+//         &:last-child {
+//             width: 26rem;
+//             background-color: $Background-brown;
+//             border: 1px solid $Background-brown;
+//             color: #fff;
+//             &:hover {
+//                 background-color: rgb(239, 239, 239);
+//                 color: $Background-brown;
+//                 border: 1px solid $Background-brown;
+//             }
+//         }
+//     }
+// }
+// .Copyright {
+//     margin-top: 16rem;
+//     font-size: 1.2rem;
+//     vertical-align: bottom;
+// }
 
-            // .text-list {
-            //     vertical-align: bottom;
-            //     font-size: 1.5rem;
-            //     margin-bottom: 5rem;
-            //     a {
-            //         display: inline-block;
-            //         line-height: 1;
-            //     }
-            //     li {
-            //         padding-top: 10px;
-            //     }
-            // }
-            // .Company-List {
-            //     li {
-            //         width: 210px;
-            //         display: block;
-            //         border-bottom: 1px solid black;
-            //         padding: 15px 0;
-            //         &:nth-child(2) {
-            //             padding: 25px 0;                    
-            //         }
-            //     }
-            // }
+// .text-list {
+//     vertical-align: bottom;
+//     font-size: 1.5rem;
+//     margin-bottom: 5rem;
+//     a {
+//         display: inline-block;
+//         line-height: 1;
+//     }
+//     li {
+//         padding-top: 10px;
+//     }
+// }
+// .Company-List {
+//     li {
+//         width: 210px;
+//         display: block;
+//         border-bottom: 1px solid black;
+//         padding: 15px 0;
+//         &:nth-child(2) {
+//             padding: 25px 0;                    
+//         }
+//     }
+// }

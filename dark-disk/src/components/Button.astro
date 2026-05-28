@@ -1,11 +1,17 @@
 ---
 // src/components/Button.astro
 
-import '../styles/components/Button.scss';
+import "../styles/components/button.scss";
 
-const { href = "#" } = Astro.props;
+interface Props {
+  text?: string;
+  href?: string;
+  variant?: "primary" | "brown" | "transparent";
+}
+
+const { href = "#", text = "ボタン", variant = "primary" }: Props = Astro.props;
 ---
 
-<a href={href}class="btn">
-  <slot />
+<a href={href} class={`btn btn--${variant}`}>
+  <span>{text}</span>
 </a>
