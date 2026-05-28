@@ -1,35 +1,63 @@
 ---
-import '../styles/page2.scss';
+import Layout from "../Layouts/Layout2.astro";
+import "../styles/page2.scss";
+import Button from "../components/Button.astro";
 ---
 
 <html lang="ja">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>page2</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page2</title>
+  </head>
+  <body>
     <main>
-      <div class="pc-only">
-        <div class="mainvisual">
-          <div class="mainvisual1">
-            <div class="heading">
-              <h1>ただ泊まるだけではない、<br>記憶に残るひとときを。</h1>
+      <Layout>
+        <div class="top-1">
+          <div class="pc-only">
+            <div class="mainvisual-top1">
+              <div class="mainvisual2">
+                <div class="Project">
+                  <h2>PROJECT</h2>
+                  <div class="button-group">
+                    <Button
+                      href="/project/"
+                      text="PROJECT 一覧"
+                      variant="transparent"
+                    />
+
+                    <Button
+                      href="/about/"
+                      text="Reserve｜予約"
+                      variant="brown"
+                    />
+                  </div>
+                </div>
+                <div class="Movie">
+                  <h2>MOVIE</h2>
+                </div>
+              </div>
+              <div class="mainvisual1">
+                <div class="heading">
+                  <h1>ただ泊まるだけではない、<br />記憶に残るひとときを。</h1>
+                </div>
+                <div class="gradation">
+                  <p>
+                    時間とともに表情を変える空間の中で、<br
+                    />気持ちがゆるやかにほどけていく。<br
+                    />日常から少し離れ、ただ過ぎゆく時を愉しむ。<br
+                    />その場所ごとに込めた思いと心地よさが溶け合う、<br
+                    />くつろぎの滞在をお楽しみください。
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="gradation">
-              <p>時間とともに表情を変える空間の中で、<br>気持ちがゆるやかにほどけていく。<br>日常から少し離れ、ただ過ぎゆく時を愉しむ。<br>その場所ごとに込めた思いと心地よさが溶け合う、<br>くつろぎの滞在をお楽しみください。</p>
-            </div>
-          </div>
-          <div class="mainvisual2">
-            
           </div>
         </div>
-        
-      </div>
+      </Layout>
       <p>テストリンク<a href="/test">TEST</a></p>
       <p>テストリンク<a href="/index2">index2</a></p>
       <p>テストリンク<a href="/page2">page2</a></p>
     </main>
-
-</body>
+  </body>
 </html>
