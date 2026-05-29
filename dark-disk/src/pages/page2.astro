@@ -2,6 +2,7 @@
 import Layout from "../Layouts/Layout2.astro";
 import "../styles/page2.scss";
 import Button from "../components/Button.astro";
+import ReserveButton from "../components/ReserveButton.astro";
 ---
 
 <html lang="ja">
@@ -19,19 +20,22 @@ import Button from "../components/Button.astro";
               <div class="mainvisual2">
                 <div class="Project">
                   <h2>PROJECT</h2>
-                  <div class="button-group">
+                  <nav class="item">
+                    <ul>
+                      <li>itoshima810</li>
+                      <li>itoshima808</li>
+                      <li>Tamagawa4</li>
+                      <li>Okusu3</li>
+                    </ul>
+                  </nav>
+                  <nav class="button-group">
                     <Button
                       href="/project/"
                       text="PROJECT 一覧"
                       variant="transparent"
                     />
-
-                    <Button
-                      href="/about/"
-                      text="Reserve｜予約"
-                      variant="brown"
-                    />
-                  </div>
+                    <ReserveButton />
+                  </nav>
                 </div>
                 <div class="Movie">
                   <h2>MOVIE</h2>

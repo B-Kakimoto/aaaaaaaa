@@ -1,0 +1,67 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.reserve-btn {
+  width: 100%;
+  // display: flex;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 8rem;
+  text-decoration: none;
+  background: $Background-brown;
+  color: #fff;
+  transition: transform 0.3s;
+  &:hover{
+      transform: scale(1.05);
+    }
+  
+    @include mq('max-lg') {
+      max-width: 45rem;
+     // width: 45rem;
+     height: 6rem;
+   }
+    @include mq('min-lg') {
+      max-width: 30.1rem;
+      // width: 30.1rem;
+      height: 4rem;
+    } 
+
+
+  
+ &-en, &-ja {
+    display: inline-block;
+    font-family: "Raleway", "Yu Gothic", "YuGothic", "游ゴシック体", sans-serif;
+  }
+
+  &-en {
+    @include mq('max-lg') {
+      font-size: 3.3rem
+    }
+    @include mq('min-lg') {
+      font-size: 2.1rem
+    }
+  }
+  
+  &-ja {
+    @include mq('max-lg') {
+      font-size: 2.8rem;
+    }
+    @include mq('min-lg') {
+      font-size: 1.8rem;
+    }
+  }
+
+  &-divider {
+    display: inline-block;
+    @include mq('max-lg') {
+      margin-left: 35px;
+      margin-right: 21px;
+    }
+    @include mq('min-lg') {
+      margin-left: 20px;
+      margin-right: 15px;
+    }
+  }
+}
