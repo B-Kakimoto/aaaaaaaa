@@ -1,4 +1,5 @@
 @use './mixins.scss'as *;
+@use './variables.scss'as *;
 
 body {
   font-family: serif;
@@ -45,7 +46,7 @@ a {
       width: 100%;
       height: 3457px;
       top: 72.5rem;
-      background-image: url(../../assets/image/top/1-mainvisual-3.webp);
+      background-image: url(../image/1-mainvisual-3.webp);
       background-size: cover;
       background-position: center;
       z-index: 3;
@@ -58,6 +59,19 @@ a {
         width: 100%;
         display: flex;
         flex-direction: column;
+
+        .item {
+          ul {
+            display: flex;
+
+            li {
+              width: 150px;
+              height: 300px;
+              border-radius: 50px;
+              background: white;
+            }
+          }
+        }
 
         .button-group {
           margin: 0 auto;
@@ -81,7 +95,7 @@ a {
     .mainvisual1 {
       position: relative;
       height: 1280px;
-      background-image: url(../../assets/image/top/1-mainvisual-2.webp);
+      background-image: url(../image/1-mainvisual-2.webp);
       background-size: cover;
       background-position: center;
       display: flex;
