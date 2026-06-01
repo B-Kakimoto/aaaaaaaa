@@ -14,50 +14,45 @@ import ReserveButton from "../components/ReserveButton.astro";
   <body>
     <main>
       <Layout>
-        <div class="top-1">
-          <div class="pc-only">
-            <div class="mainvisual-top1">
-              <div class="mainvisual2">
-                <div class="Project">
-                  <h2>PROJECT</h2>
-                  <nav class="item">
-                    <ul>
-                      <li>itoshima810</li>
-                      <li>itoshima808</li>
-                      <li>Tamagawa4</li>
-                      <li>Okusu3</li>
-                    </ul>
-                  </nav>
-                  <nav class="button-group">
-                    <Button
-                      href="/project/"
-                      text="PROJECT 一覧"
-                      variant="transparent"
-                    />
-                    <ReserveButton />
-                  </nav>
-                </div>
-                <div class="Movie">
-                  <h2>MOVIE</h2>
-                </div>
-              </div>
-              <div class="mainvisual1">
-                <div class="heading">
-                  <h1>ただ泊まるだけではない、<br />記憶に残るひとときを。</h1>
-                </div>
-                <div class="gradation">
-                  <p>
-                    時間とともに表情を変える空間の中で、<br
-                    />気持ちがゆるやかにほどけていく。<br
-                    />日常から少し離れ、ただ過ぎゆく時を愉しむ。<br
-                    />その場所ごとに込めた思いと心地よさが溶け合う、<br
-                    />くつろぎの滞在をお楽しみください。
-                  </p>
-                </div>
-              </div>
+        <section class="mainvisual-top1">
+          <section class="mainvisual2">
+            <div class="Project">
+              <h2>PROJECT</h2>
+              <nav class="item">
+                <ul>
+                  <li><img src="SVG/itoshima810.svg" alt="" /></li>
+                  <li><img src="SVG/Itoshima808.svg" alt="" /></li>
+                  <li>Tamagawa4</li>
+                  <li>Okusu3</li>
+                </ul>
+              </nav>
+              <nav class="button-group">
+                <Button
+                  href="/project/"
+                  text="PROJECT 一覧"
+                  variant="transparent"
+                />
+                <ReserveButton />
+              </nav>
             </div>
-          </div>
-        </div>
+            <div class="Movie">
+              <h2>MOVIE</h2>
+            </div>
+          </section>
+          <section class="mainvisual1">
+            <h1 class="heading">
+              ただ泊まるだけではない、<br />記憶に残るひとときを。
+            </h1>
+
+            <p class="gradation">
+              時間とともに表情を変える空間の中で、<br
+              />気持ちがゆるやかにほどけていく。<br
+              />日常から少し離れ、ただ過ぎゆく時を愉しむ。<br
+              />その場所ごとに込めた思いと心地よさが溶け合う、<br
+              />くつろぎの滞在をお楽しみください。
+            </p>
+          </section>
+        </section>
       </Layout>
       <p>テストリンク<a href="/test">TEST</a></p>
       <p>テストリンク<a href="/index2">index2</a></p>
