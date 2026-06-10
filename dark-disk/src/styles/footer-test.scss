@@ -147,6 +147,7 @@ footer {
   .Language {
     position: absolute;
     right: 30rem;
+
     nav {
       padding-top: 10px;
       display: flex;
@@ -252,7 +253,7 @@ footer {
         gap: 2rem;
 
         a {
-          width: 26rem;
+          width: 260px;
           background-color: rgb(239, 239, 239);
           color: $Background-brown;
           border: 1px solid $Background-brown;
@@ -266,7 +267,7 @@ footer {
           }
 
           &:last-child {
-            width: 26rem;
+            width: 260px;
             background-color: $Background-brown;
             border: 1px solid $Background-brown;
             color: #fff;
