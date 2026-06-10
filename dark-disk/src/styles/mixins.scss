@@ -1,10 +1,47 @@
-$breakpoints: (
-  'max-lg': '(max-width: 1023px)',
-  'min-lg': '(min-width: 1024px)',
-);
+// $breakpoints: (
+//   'max-lg': '(max-width: 1023px)',
+//   'min-lg': '(min-width: 1024px)',
+// );
 
-@mixin mq($size) {
-  @media #{map-get($breakpoints, $size)} {
-    @content;
+// @mixin mq($size) {
+//   @media #{map-get($breakpoints, $size)} {
+//     @content;
+//   }
+// }
+
+@use "./variables"as *;
+@use "sass:meta";
+// ========================================
+// Mixins
+// - breakpoint（レスポンシブ）
+// - 再利用処理
+// ========================================
+
+
+
+// PC版　= min-lg（1024px以上）
+// SP版 = max-lg（1023px以下）
+//使い方の例： @include mq('max-lg'):ソースコード
+$breakpoints: ('min-lg': (min-width: 1024px),
+  'max-lg': (max-width: 1023px),
+) !default;
+
+
+
+/* ---------------------------------------------------
+  Mixin
+--------------------------------------------------- */
+// ブレークポイント
+@mixin mq($breakpoint) {
+  @if $breakpoint=='min-lg' {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint=='max-lg' {
+    @media (max-width: 1023px) {
+      @content;
+    }
   }
 }

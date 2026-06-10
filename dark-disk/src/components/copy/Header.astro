@@ -1,0 +1,407 @@
+---
+import InstagramIcon from "../assets/SVG/Instagram.svg";
+import LineIcon from "../assets/SVG/LINE_1.svg";
+import LineIcon2 from "../assets/SVG/LINE_2.svg";
+import hamburgermenu from "../assets/SVG/hamburger.svg";
+import "../styles/style.scss";
+/**
+ * Header.astro
+ * 左側にロゴ＋グローバルナビ、右側に施設名タブ・SNS・予約ボタン・言語切替・ハンバーガーを配置。
+ * ※ スタイルは header.scss で管理
+ */
+/** このロゴ使います宣伝 */
+interface Props {
+	currentPath?: string;
+}
+
+/** 現在のページ（currentPath）を取得し、無い場合は「/」を使う */
+const { currentPath = "/" } = Astro.props;
+
+/** グローバルナビゲーション項目 */
+const navItems = [
+	{ label: "ABOUT", href: "/about" },
+	{ label: "PROJECT", href: "/project" },
+	{ label: "CONTACT", href: "/contact" },
+];
+
+/** 施設一覧 */
+const facilities = [
+	{ label: "Itoshima 810", href: "/facility/itoshima-810" },
+	{ label: "Itoshima 808", href: "/facility/itoshima-808" },
+	{ label: "Tamagawa4", href: "/facility/tamagawa4" },
+	{ label: "Okusu3", href: "/facility/okusu3" },
+];
+---
+
+<!-- ========== ヘッダーエリア========== -->
+<header class="header" id="siteHeader">
+	<div class="header__inner">
+		<!-- ========== 左エリア: ロゴ + グローバルナビ ========== -->
+		<div class="header__left">
+			<a href="/" class="header__logo" id="headerLogo"> YONEDA HOTEL GROUP </a>
+			<nav
+				class="header__nav"
+				id="globalNav"
+				aria-label="グローバルナビゲーション"
+			>
+				<ul class="header__nav-list">
+					{
+						navItems.map((item) => (
+							<li class="header__nav-item">
+								<a
+									href={item.href}
+									class:list={[
+										"header__nav-link",
+										{ "is-active": currentPath === item.href },
+									]}
+								>
+									{item.label}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+		</div>
+
+		<!-- ========== 右エリア: 施設タブ + アクション ========== -->
+		<div class="header__right">
+			<!-- 施設タブ -->
+			<nav class="header__facilities" aria-label="施設一覧">
+				<ul class="header__facilities-list">
+					{
+						facilities.map((facility) => (
+							<li class="header__facilities-item">
+								<a href={facility.href} class="header__facilities-link">
+									{facility.label}
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</nav>
+
+			<!-- SNS アイコン -->
+			<div class="header__sns">
+				<a
+					href="https://www.instagram.com/"
+					class="header__sns-link"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Instagram"
+				>
+					<!-- Instagram アイコン（SVG） -->
+					<svg
+						class="header__sns-icon"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+						<circle cx="12" cy="12" r="5"></circle>
+						<circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"
+						></circle>
+					</svg>
+				</a>
+
+				<!-- LINE アイコン（SVG） -->
+				<a
+					href="https://line.me/..."
+					class="header__sns-link"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="LINE"
+				>
+					<img src={LineIcon2.src} alt="" class="header__sns-icon" />
+				</a>
+			</div>
+			<!-- Reserve / 予約 ボタン -->
+			<div class="header__reserve">
+				<a href="/reserve" class="header__reserve-btn" id="reserveBtn">
+					<span class="header__reserve-btn-en">Reserve</span>
+					<span class="header__reserve-btn-divider" aria-hidden="true"></span>
+					<span class="header__reserve-btn-ja">予約</span>
+				</a>
+			</div>
+			<!-- 言語切替 -->
+			<div class="header__lang" id="langSwitch">
+				<button
+					type="button"
+					class="header__lang-btn is-active"
+					data-lang="ja"
+					aria-label="日本語に切り替え"
+				>
+					<svg
+						class="header__lang-svg"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 18 13.07"
+					>
+						<path
+							class="cls-4"
+							d="M1.21,10.13c.1.5.32.93.68,1.27.35.34.82.51,1.4.51.44,0,.81-.08,1.1-.24.29-.16.52-.38.69-.66.17-.28.29-.59.36-.94s.1-.72.1-1.11V0h1.3v9.07c0,.42-.04.86-.13,1.33-.09.47-.26.9-.51,1.3-.25.4-.6.72-1.04.98-.44.26-1.01.39-1.71.39-.92,0-1.69-.25-2.29-.74s-.98-1.12-1.13-1.87l1.21-.32Z"
+						></path>
+						<path
+							class="cls-4"
+							d="M10.1,0h3.6c.65,0,1.24.07,1.76.21.53.14.98.35,1.36.63.38.28.67.64.87,1.06.2.43.31.93.31,1.5s-.11,1.08-.32,1.5-.5.78-.88,1.06c-.38.28-.83.5-1.37.64-.53.14-1.12.22-1.77.22h-2.27v5.92h-1.3V0ZM11.39,5.72h2.2c1.02,0,1.79-.2,2.32-.59.53-.4.79-.97.79-1.73s-.27-1.37-.82-1.74c-.55-.37-1.31-.55-2.29-.55h-2.2v4.61Z"
+						></path>
+					</svg>
+				</button>
+				<span class="header__language-btn-divider" aria-hidden="true"></span>
+				<button
+					type="button"
+					class="header__lang-btn"
+					data-lang="en"
+					aria-label="Switch to English"
+				>
+					<svg
+						class="header__lang-svg"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 21.02 12.74"
+					>
+						<path
+							class="cls-3"
+							d="M1.3,11.59h6.82v1.15H0V0h7.9v1.15H1.3v4.37h6.17v1.15H1.3v4.91Z"
+						></path>
+						<path
+							class="cls-3"
+							d="M19.69,10.85h.04V0h1.3v12.74h-1.62L11.99,1.78h-.04v10.96h-1.3V0h1.62l7.42,10.85Z"
+						></path>
+					</svg>
+				</button>
+			</div>
+			<!-- ハンバーガーボタン ★★★ -->
+			<button
+				class="header__hamburger"
+				id="hamburgerButton"
+				type="button"
+				aria-label="メニューを開く"
+				aria-expanded="false"
+			>
+				<span class="header__hamburger-line"></span>
+				<span class="header__hamburger-line"></span>
+			</button>
+		</div>
+	</div>
+
+	<!-- ==================== SP メニューパネル ==================== -->
+	<div class="header__panel" id="menuPanel">
+		<!-- 閉じるボタン -->
+		<button
+			class="header__panel-close"
+			id="panelCloseButton"
+			type="button"
+			aria-label="メニューを閉じる"
+		>
+			<svg
+				class="header__sns-icon"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="1.5"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			>
+				<polygon
+					class="cls-2"
+					points="25.27 16.84 0 1.7 1.05 0 26.32 15.14 25.27 16.84"></polygon>
+				<polygon
+					class="cls-2"
+					points="1.05 16.84 26.32 1.7 25.27 0 0 15.14 1.05 16.84"></polygon>
+			</svg>
+		</button>
+		<!-- 言語切替 -->
+		<div class="header__panel-lang" id="langSwitch">
+			<button
+				type="button"
+				class="header__lang-btn is-active"
+				data-lang="ja"
+				aria-label="日本語に切り替え"
+			>
+				<svg
+					class="header__lang-svg"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 18 13.07"
+				>
+					<path
+						class="cls-4"
+						d="M1.21,10.13c.1.5.32.93.68,1.27.35.34.82.51,1.4.51.44,0,.81-.08,1.1-.24.29-.16.52-.38.69-.66.17-.28.29-.59.36-.94s.1-.72.1-1.11V0h1.3v9.07c0,.42-.04.86-.13,1.33-.09.47-.26.9-.51,1.3-.25.4-.6.72-1.04.98-.44.26-1.01.39-1.71.39-.92,0-1.69-.25-2.29-.74s-.98-1.12-1.13-1.87l1.21-.32Z"
+					></path>
+					<path
+						class="cls-4"
+						d="M10.1,0h3.6c.65,0,1.24.07,1.76.21.53.14.98.35,1.36.63.38.28.67.64.87,1.06.2.43.31.93.31,1.5s-.11,1.08-.32,1.5-.5.78-.88,1.06c-.38.28-.83.5-1.37.64-.53.14-1.12.22-1.77.22h-2.27v5.92h-1.3V0ZM11.39,5.72h2.2c1.02,0,1.79-.2,2.32-.59.53-.4.79-.97.79-1.73s-.27-1.37-.82-1.74c-.55-.37-1.31-.55-2.29-.55h-2.2v4.61Z"
+					></path>
+				</svg>
+			</button>
+			<span class="header__language-btn-divider" aria-hidden="true"></span>
+			<button
+				type="button"
+				class="header__lang-btn"
+				data-lang="en"
+				aria-label="Switch to English"
+			>
+				<svg
+					class="header__lang-svg"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 21.02 12.74"
+				>
+					<path
+						class="cls-3"
+						d="M1.3,11.59h6.82v1.15H0V0h7.9v1.15H1.3v4.37h6.17v1.15H1.3v4.91Z"
+					></path>
+					<path
+						class="cls-3"
+						d="M19.69,10.85h.04V0h1.3v12.74h-1.62L11.99,1.78h-.04v10.96h-1.3V0h1.62l7.42,10.85Z"
+					></path>
+				</svg>
+			</button>
+		</div>
+
+		<!-- パネル内:YONEDA HOTEL GROUP -->
+		<div class="header__left">
+			<a href="/" class="header__panel-logo" id="headerLogo">
+				YONEDA HOTEL GROUP
+			</a>
+		</div>
+
+		<!-- パネル内: 施設ボタン -->
+		<nav class="header__panel-facilities">
+			{
+				facilities.map((facility) => (
+					<a href={facility.href} class="header__panel-facility-link">
+						{facility.label}
+					</a>
+				))
+			}
+		</nav>
+
+		<!-- パネル専用クラス -->
+		<div class="header__panel-reserve">
+			<a href="/reserve" class="header__panel-reserve-btn">
+				<span class="header__reserve-btn-en">Reserve</span>
+				<span class="header__reserve-btn-divider" aria-hidden="true"></span>
+				<span class="header__reserve-btn-ja">予約</span>
+			</a>
+		</div>
+		<!------------ パネル内: SNSアイコン ------------>
+		<div class="header__panel-sns">
+			<a
+				href="https://www.instagram.com/"
+				class="header__panel-sns-link"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Instagram"
+			>
+				<!-- Instagram アイコン（SVG） -->
+				<img src={InstagramIcon.src} alt="" class="header__sns-icon" />
+			</a>
+			<!-- LINE アイコン（SVG） -->
+			<a
+				href="https://line.me/..."
+				class="header__panel-sns-link"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="LINE"
+			>
+				<img src={LineIcon.src} alt="" class="header__sns-icon" />
+			</a>
+		</div>
+
+		<!------------ パネル内: ナビリンク ------------>
+		<nav class="header__panel-nav" aria-label="パネルナビゲーション">
+			<ul class="header__panel-nav-list">
+				{
+					navItems.map((item) => (
+						<li class="header__panel-nav-item">
+							<a href={item.href} class="header__panel-nav-link">
+								{item.label}
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</nav>
+
+		<!------------ パネル内: フッター情報 ------------>
+		<div class="header__panel-footer">
+			<a href="/hotel-consultation" class="header__panel-footer-cta">
+				ホテルづくりをお考えの方へ
+			</a>
+			<div class="header__panel-footer-info">
+				<p class="header__panel-footer-company">米田建築工房</p>
+				<p class="header__panel-footer-dept">設計部門</p>
+				<p class="header__panel-footer-brand">TRUNK DESIGN OFFICE</p>
+			</div>
+		</div>
+	</div>
+	<!-- オーバーレイ -->
+	<div class="header__overlay" id="menuOverlay"></div>
+</header>
+
+<script is:inline>
+	/**
+	 * メニューパネルの開閉処理
+	 */
+	document.addEventListener("DOMContentLoaded", () => {
+		const hamburger = document.getElementById("hamburgerButton");
+		const closeBth = document.getElementById("panelCloseButton");
+		const panel = document.getElementById("menuPanel");
+		const overlay = document.getElementById("menuOverlay");
+		const header = document.getElementById("siteHeader");
+
+		// どれか1つでも取得できなかった場合、それ以降のJavaScript処理
+		if (!hamburger || !closeBth || !panel || !overlay || !header) return;
+
+		const openMenu = () => {
+			header.classList.add("is-menu-open");
+			hamburger.setAttribute("aria-expanded", "true");
+			hamburger.setAttribute("aria-label", "メニューを閉じる");
+			document.body.style.overflow = "hidden";
+		};
+		const closeMenu = () => {
+			header.classList.remove("is-menu-open");
+			hamburger.setAttribute("aria-expanded", "false");
+			hamburger.setAttribute("aria-label", "メニューを開く");
+			document.body.style.overflow = "";
+		};
+
+		const toggleMenu = () => {
+			if (header.classList.contains("is-menu-open")) {
+				closeMenu();
+			} else {
+				openMenu();
+			}
+		};
+
+		// クリックで開くだけ|閉じるのはパネル内の別ボタン
+		// hamburger.addEventListener('click', openMenu);
+
+		// クリックで開く／閉じるを切り替え|同じボタンで開閉できる
+		hamburger.addEventListener("click", toggleMenu);
+		closeBth.addEventListener("click", closeMenu);
+		overlay.addEventListener("click", closeMenu);
+
+		// パネル内ナビリンクをクリックしたらメニューを閉じる
+		panel.querySelectorAll("a").forEach((link) => {
+			link.addEventListener("click", closeMenu);
+		});
+	});
+
+	/**
+	 * 言語切替ボタンの処理
+	 */
+	document.addEventListener("DOMContentLoaded", () => {
+		const langButtons = document.querySelectorAll(".header__lang-btn");
+
+		langButtons.forEach((btn) => {
+			btn.addEventListener("click", () => {
+				langButtons.forEach((b) => b.classList.remove("is-active"));
+				btn.classList.add("is-active");
+			});
+		});
+	});
+</script>

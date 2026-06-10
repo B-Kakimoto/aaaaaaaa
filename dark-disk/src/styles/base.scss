@@ -1,0 +1,35 @@
+// ========================================
+// Base
+// - 全体の基本設定
+// - 10pxベース（1rem = 10px）
+// - line-height / body設定
+// ========================================
+
+@use "./variables"as *;
+@use "./mixins"as *;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&family=Shippori+Mincho:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'Avenir Roman';
+    src: url('/src/assets/fonts/Avenir-Roman.otf') format('opentype');
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px（チームルール） */
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    font-size: 1.6rem;
+    /* 16px相当 */
+    line-height: 1.6;
+    color: $font-color; // variablesで定義している場合
+}
+
+.header {
+    font-family: 'Avenir Roman', sans-serif;
+}
