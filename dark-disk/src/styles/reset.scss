@@ -1,0 +1,42 @@
+@use "./variables"as *;
+
+// ========================================
+// Reset(リセット)
+// - ブラウザのデフォルトスタイルをリセット
+// ========================================
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+img,
+video,
+canvas,
+svg {
+    display: block flow;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+}

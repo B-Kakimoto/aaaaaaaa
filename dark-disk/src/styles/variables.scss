@@ -16,19 +16,23 @@ $header-height-sp: 60px;
 // タイポグラフィ
 // ============================
 // ※フォントは「テスト」です。本来のフォントは今週内に用意します。
-$font-family-base: 'Raleway', 'Noto Sans JP', sans-serif; //font-family: 'Raleway';
-$font-family-heading: 'Outfit', 'Noto Sans JP', sans-serif;
+$font-family-base: 'Raleway',
+'Noto Sans JP',
+sans-serif; //font-family: 'Raleway';
+$font-family-heading: 'Outfit',
+'Noto Sans JP',
+sans-serif;
 
 // ※ 1rem = 10px（html { font-size: 62.5% } ルール）
-$font-size-xs: 1.2rem;    // 12px
-$font-size-sm: 1.4rem;    // 14px
-$font-size-base: 1.6rem;  // 16px
-$font-size-lg: 1.8rem;    // 18px
-$font-size-xl: 2.0rem;    // 20px
-$font-size-2xl: 2.4rem;   // 24px
-$font-size-3xl: 3.0rem;   // 30px
-$font-size-4xl: 3.6rem;   // 36px
-$font-size-5xl: 4.8rem;   // 48px
+$font-size-xs: 1.2rem; // 12px
+$font-size-sm: 1.4rem; // 14px
+$font-size-base: 1.6rem; // 16px
+$font-size-lg: 1.8rem; // 18px
+$font-size-xl: 2.0rem; // 20px
+$font-size-2xl: 2.4rem; // 24px
+$font-size-3xl: 3.0rem; // 30px
+$font-size-4xl: 3.6rem; // 36px
+$font-size-5xl: 4.8rem; // 48px
 
 $font-weight-normal: 400;
 $font-weight-medium: 500;
@@ -56,23 +60,23 @@ $line-height-sp: 1.55;
 // ============================
 // スペーシング
 // ============================
-$spacing-xs: 0.4rem;   // 4px
-$spacing-sm: 0.8rem;   // 8px
-$spacing-md: 1.6rem;   // 16px
-$spacing-lg: 2.4rem;   // 24px
-$spacing-xl: 3.2rem;   // 32px
-$spacing-2xl: 4.8rem;  // 48px
-$spacing-3xl: 6.4rem;  // 64px
-$spacing-4xl: 9.6rem;  // 96px   
+$spacing-xs: 0.4rem; // 4px
+$spacing-sm: 0.8rem; // 8px
+$spacing-md: 1.6rem; // 16px
+$spacing-lg: 2.4rem; // 24px
+$spacing-xl: 3.2rem; // 32px
+$spacing-2xl: 4.8rem; // 48px
+$spacing-3xl: 6.4rem; // 64px
+$spacing-4xl: 9.6rem; // 96px   
 
 
 // ============================
 // ボーダー・角丸
 // ============================
-$border-radius-sm: 0.6rem;   // 6px
-$border-radius-md: 1.2rem;   // 12px
-$border-radius-lg: 1.6rem;   // 16px
-$border-radius-xl: 2.4rem;   // 24px
+$border-radius-sm: 0.6rem; // 6px
+$border-radius-md: 1.2rem; // 12px
+$border-radius-lg: 1.6rem; // 16px
+$border-radius-xl: 2.4rem; // 24px
 $border-radius-full: 9999px;
 
 // ============================

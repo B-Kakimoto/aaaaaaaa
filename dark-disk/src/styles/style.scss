@@ -1,23 +1,21 @@
-@use './mixins.scss' as *;
+@charset "UTF-8";
 
-.box {
-    p {
-      color: red;
-    }
-  }
+// ========================================
+// Global Style Entry
+// - foundation
+// - layout
+// - components
+// ========================================
 
-.pc-only {
-  display: block;
+// foundation
+@use "./foundation/reset";
+@use "./foundation/variables";
+@use "./foundation/mixins";
+@use "./foundation/base";
 
-  @include mq('max-lg') {
-    display: none;
-  }
-}
+// layout
+@use "./layout/header";
 
-.sp-only {
-  display: none;
-
-  @include mq('max-lg') {
-    display: block;
-  }
-}
+// components
+@use "./components/button";
+@use "./components/card";
