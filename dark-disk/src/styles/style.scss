@@ -8,14 +8,13 @@
 // ========================================
 
 // foundation
-@use "./foundation/reset";
-@use "./foundation/variables";
-@use "./foundation/mixins";
-@use "./foundation/base";
+@use "./reset";
+@use "./variables";
+@use "./mixins";
+@use "./base";
 
 // layout
 @use "./layout/header";
 
 // components
 @use "./components/button";
-@use "./components/card";

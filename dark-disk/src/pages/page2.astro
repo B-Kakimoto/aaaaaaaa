@@ -10,21 +10,35 @@ import ReserveButton from "../components/ReserveButton.astro";
 
 <Layout>
   <main>
-    <section id="mainvisual-top1">
-      <div class="mainvisual2">
-        <div class="Project">
-          <h2>PROJECT</h2>
-          <nav class="item">
-            <ul>
-              <li><img src="/src/assets/SVG/itoshima810.svg" alt="" /></li>
-              <li><img src="/src/assets/SVG/Itoshima808-1.svg" alt="" /></li>
+    <section id="mainvisual-top1" class="top-page">
+      <div class="top-page__mainvisual2">
+        <div class="top-page__Project">
+          <h2 class="top-page__m2-h2">PROJECT</h2>
+          <nav class="top-page__item">
+            <ul class="top-page__svg top-page__svg--first">
+              <li class="top-page__project-list1 top-page__li-list">
+                <img
+                  class="top-page__item-svg"
+                  src="/src/image/SVG/itoshima810.svg"
+                  alt=""
+                />
+              </li>
+              <li class="top-page__project-list1 top-page__li-list">
+                <img
+                  class="top-page__item-svg"
+                  src="/src/image/SVG/Itoshima808-1.svg"
+                  alt=""
+                />
+              </li>
             </ul>
-            <ul>
-              <li>Tamagawa4</li>
-              <li>Okusu3</li>
+            <ul class="top-page__svg top-page__svg--second">
+              <li class="top-page__project-list2 top-page__li-list">
+                Tamagawa4
+              </li>
+              <li class="top-page__project-list2 top-page__li-list">Okusu3</li>
             </ul>
           </nav>
-          <nav class="button-group">
+          <nav class="top-page__button-group">
             <Button
               href="/project/"
               text="PROJECT 一覧"
@@ -33,26 +47,40 @@ import ReserveButton from "../components/ReserveButton.astro";
             <ReserveButton />
           </nav>
         </div>
-        <div class="Movie">
-          <h2>MOVIE</h2>
-          <nav>
-            <ul>
-              <li><img src="/src/assets/SVG/動画再生アイコン.svg" /></li>
-              <li>itoshima810 VILLA & RESORT</li>
+        <div class="top-page__Movie">
+          <h2 class="m2-h2">MOVIE</h2>
+          <nav class="top-page__movie-svg">
+            <ul class="top-page__movie-svg-list">
+              <li class="top-page__movie-list li-list">
+                <img
+                  class="top-page__movie-icon"
+                  src="/src/image/SVG/動画再生アイコン.svg"
+                />
+              </li>
+              <li class="top-page__movie-list li-list">
+                itoshima810 VILLA & RESORT
+              </li>
             </ul>
-            <ul>
-              <li><img src="/src/assets/SVG/動画再生アイコン.svg" /></li>
-              <li>Itoshima808 GRAND VIEW VILLA</li>
+            <ul class="top-page__movie-svg-list">
+              <li class="top-page__movie-list li-list">
+                <img
+                  class="top-page__movie-icon"
+                  src="/src/image/SVG/動画再生アイコン.svg"
+                />
+              </li>
+              <li class="top-page__movie-list li-list">
+                Itoshima808 GRAND VIEW VILLA
+              </li>
             </ul>
           </nav>
         </div>
       </div>
-      <div class="mainvisual1">
-        <h1 class="heading">
+      <div class="top-page__mainvisual1">
+        <h1 class="top-page__heading">
           ただ泊まるだけではない、<br />記憶に残るひとときを。
         </h1>
 
-        <p class="gradation">
+        <p class="top-page__text">
           時間とともに表情を変える空間の中で、<br
           />気持ちがゆるやかにほどけていく。<br
           />日常から少し離れ、ただ過ぎゆく時を愉しむ。<br
@@ -62,107 +90,122 @@ import ReserveButton from "../components/ReserveButton.astro";
       </div>
     </section>
 
-    <section id="mainvisual-top2">
-      <div class="media">
-        <h2>MEDIA</h2>
-        <div class="magazine">
-          <ul>
+    <section id="mainvisual-top2" class="top-page">
+      <div class="top-page__media">
+        <h2 class="top-page__media-h2">MEDIA</h2>
+        <div class="top-page__magazine">
+          <ul class="top-page__magazine-list">
             <li></li>
             <li>掲載雑誌名</li>
           </ul>
-          <ul>
+          <ul class="top-page__magazine-list">
             <li></li>
             <li>掲載雑誌名</li>
           </ul>
         </div>
       </div>
 
-      <div class="STAY-in-DESIGN">
-        <div class="scroll-infinity">
-          <div class="scroll-infinity__wrap">
-            <ul class="scroll-infinity__list scroll-infinity__list--left">
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-1.webp" />
+      <div class="top-page__STAY-in-DESIGN">
+        <div class="top-page__scroll-infinity">
+          <div class="top-page__scroll-infinity__wrap">
+            <ul
+              class="top-page__scroll-infinity__list top-page__scroll-infinity__list--left"
+            >
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-1.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-2.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-2.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-3.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-3.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-4.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-4.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-5.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-5.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-6.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-6.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-7.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-7.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-8.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-8.webp" />
               </li>
             </ul>
-            <ul class="scroll-infinity__list scroll-infinity__list--left">
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-1.webp" />
+            <ul
+              class="top-page__scroll-infinity__list top-page__scroll-infinity__list--left"
+            >
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-1.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-2.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-2.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-3.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-3.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-4.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-4.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-5.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-5.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-6.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-6.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-7.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-7.webp" />
               </li>
-              <li class="scroll-infinity__item">
-                <img src="/src/assets/image/top/2-slide-8.webp" />
+              <li class="top-page__scroll-infinity__item">
+                <img src="/src/image/top/2-slide-8.webp" />
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="text-area">
+        <div class="top-page__text-area">
           <h1>STAY in DESIGN.</h1>
           <p>
-            produced by<br /><img
-              src="/src/assets/image/top/designoffice.svg"
-              alt=""
-            />
+            <span>
+              produced by<br /><img
+                src="/src/image/top/designoffice.svg"
+                alt=""
+              />
+            </span>
           </p>
-          <p class="short-sentence pc-only">
+          <p class="top-page__short-sentence pc-only">
             設計事務所ならではの視点で、デザイン性と居心地の良さ、<span
               class="br"
             ></span>そして日常から少し離れる非日常感を大切にしています。
           </p>
-          <p class="short-sentence sp-only">
+          <p class="top-page__short-sentence sp-only">
             設計事務所ならではの視点で、<br />デザイン性と居心地の良さ、<br
             />そして日常から少し離れる<br />非日常感を大切にしています。
           </p>
 
-          <ul>
-            <li>
+          <ul class="top-page__footer-about">
+            <li class="top-page__about-li">
               <Button href="/about/" text="ABOUT" variant="transparent" />
             </li>
-            <li>
+            <li class="top-page__about-li">
               <a href="#"><p>ホテルづくりをお考えの方へ</p><p>&gt;</p></a>
             </li>
           </ul>
         </div>
-        <img class="" src="" alt="" />
+        <img
+          class="bottom-image pc-only"
+          src="/src/image/top/2-about.webp"
+          alt=""
+        />
+        <img
+          class="bottom-image sp-only"
+          src="/src/image/top/2-about-sp.webp"
+          alt=""
+        />
       </div>
     </section>
   </main>
