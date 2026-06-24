@@ -1,0 +1,173 @@
+---
+import Layout from "../Layouts/Layout2.astro";
+// Layout.astro = ページの共通テンプレ（外枠）
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/page1.scss";
+import Button from "../components/Button.astro";
+import ReserveButton from "../components/ReserveButton.astro";
+---
+
+<Layout>
+	<main>
+		<section id="mainvisual-top1">
+			<div class="mainvisual2">
+				<div class="Project">
+					<!-- MT=mainvisual top -->
+					<h2 class="Mt-h2">PROJECT</h2>
+					<nav class="item">
+						<ul>
+							<li><img src="/src/image/SVG/itoshima810.svg" alt="" /></li>
+							<li><img src="/src/image/SVG/Itoshima808-1.svg" alt="" /></li>
+						</ul>
+						<ul>
+							<li>Tamagawa4</li>
+							<li>Okusu3</li>
+						</ul>
+					</nav>
+					<nav class="button-group">
+						<Button
+							href="/project/"
+							text="PROJECT 一覧"
+							variant="transparent"
+						/>
+						<ReserveButton />
+					</nav>
+				</div>
+				<div class="Movie">
+					<h2 class="Mt-h2">MOVIE</h2>
+					<nav>
+						<ul>
+							<li><img src="/src/image/SVG/動画再生アイコン.svg" /></li>
+							<li>itoshima810 VILLA & RESORT</li>
+						</ul>
+						<ul>
+							<li><img src="/src/image/SVG/動画再生アイコン.svg" /></li>
+							<li>Itoshima808 GRAND VIEW VILLA</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="mainvisual1">
+				<h1 class="heading">
+					ただ泊まるだけではない、<br />記憶に残るひとときを。
+				</h1>
+
+				<p class="gradation">
+					時間とともに表情を変える空間の中で、<br
+					/>気持ちがゆるやかにほどけていく。<br
+					/>日常から少し離れ、ただ過ぎゆく時を愉しむ。<br
+					/>その場所ごとに込めた思いと心地よさが溶け合う、<br
+					/>くつろぎの滞在をお楽しみください。
+				</p>
+			</div>
+		</section>
+
+		<section id="mainvisual-top2">
+			<div class="media">
+				<h2 class="Mt-h2">MEDIA</h2>
+				<div class="magazine">
+					<ul>
+						<li></li>
+						<li>掲載雑誌名</li>
+					</ul>
+					<ul>
+						<li></li>
+						<li>掲載雑誌名</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="STAY-in-DESIGN">
+				<div class="scroll-infinity">
+					<div class="scroll-infinity__wrap">
+						<ul class="scroll-infinity__list scroll-infinity__list--left">
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-1.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-2.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-3.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-4.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-5.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-6.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-7.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-8.webp" />
+							</li>
+						</ul>
+						<ul class="scroll-infinity__list scroll-infinity__list--left">
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-1.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-2.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-3.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-4.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-5.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-6.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-7.webp" />
+							</li>
+							<li class="scroll-infinity__item">
+								<img src="/src/image/top/2-slide-8.webp" />
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="text-area">
+					<h1>STAY in DESIGN.</h1>
+					<p>
+						<span>produced by</span><br /><img
+							src="/src/image/top/designoffice.svg"
+							alt=""
+						/>
+
+						<p class="short-sentence pc-only">
+							設計事務所ならではの視点で、デザイン性と居心地の良さ、<span
+								class="br"
+							></span>そして日常から少し離れる非日常感を大切にしています。
+						</p>
+						<p class="short-sentence sp-only">
+							設計事務所ならではの視点で、<span class="br"
+							></span>デザイン性と居心地の良さ、<span class="br"
+							></span>そして日常から少し離れる<span class="br"
+							></span>非日常感を大切にしています。
+						</p>
+
+						<ul>
+							<li>
+								<Button href="/about/" text="ABOUT" variant="transparent" />
+							</li>
+							<li>
+								<a href="#"><p>ホテルづくりをお考えの方へ</p><p>&gt;</p></a>
+							</li>
+						</ul>
+					</p>
+				</div>
+				<img class="bottom-image" src="/src/image/top/2-about.webp" alt="" />
+			</div>
+		</section>
+	</main>
+</Layout>
