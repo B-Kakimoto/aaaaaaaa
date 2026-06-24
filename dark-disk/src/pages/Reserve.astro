@@ -1,0 +1,30 @@
+---
+import Layout from "../Layouts/Layout2.astro";
+import ReserveButton from "../components/ReserveButton.astro";
+import Card from "../pages/card.astro";
+import "../styles/pages/Reserve.scss";
+
+interface Props {
+	text?: string;
+}
+
+const { text } = Astro.props;
+---
+
+<Layout>
+	<div id="Reserve-Block" class="Reserve-Site-area">
+		<div class="Reserve-Site-area__text">
+			<p class="Reserve-Site-area__decoration">Reserve｜予約</p>
+		</div>
+		<p class="Reserve-Site-area__text-2">
+			{text} のご予約は下記リンク、予約サイトより。<br /><span
+				>詳細は各サイトにてご確認ください。</span
+			>
+		</p>
+		<ul class="Reserve-Site-area__Card-area">
+			<li><Card href="#" title="Airbub" /></li>
+			<li><Card /></li>
+			<li><Card /></li>
+		</ul>
+	</div>
+</Layout>
