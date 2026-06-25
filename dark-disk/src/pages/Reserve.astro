@@ -17,14 +17,20 @@ const { text } = Astro.props;
 			<p class="Reserve-Site-area__decoration">Reserve｜予約</p>
 		</div>
 		<p class="Reserve-Site-area__text-2">
-			{text} のご予約は下記リンク、予約サイトより。<br /><span
+			<span class="Reserve-Site-area__pc-only"
+				>{text} のご予約は下記リンク、予約サイトより。</span
+			>
+			<span class="Reserve-Site-area__sp-only"
+				>{text} のご予約は<br />下記リンク、予約サイトより。</span
+			>
+			<span class="Reserve-Site-area__br"
 				>詳細は各サイトにてご確認ください。</span
 			>
 		</p>
 		<ul class="Reserve-Site-area__Card-area">
 			<li><Card href="#" title="Airbub" /></li>
-			<li><Card /></li>
-			<li><Card /></li>
+			<li><Card href="#" title="Rakuten<br>Oyado" /></li>
+			<li><Card href="#" title="Booking.com" /></li>
 		</ul>
 	</div>
 </Layout>

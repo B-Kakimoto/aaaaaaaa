@@ -5,7 +5,6 @@ $Background-brown :#928572;
 
 .Reserve-Site-area {
 	border-bottom: 1px solid $Background-brown;
-	max-width: 1280px;
 	margin: 0 auto;
 
 	&__text {
@@ -13,29 +12,44 @@ $Background-brown :#928572;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		position: relative;
+
+		@include mq ('min-lg') {
+			position: relative;
+		}
 
 		&::before {
 			// 線の設定
-			content: "";
-			background-color: $Background-brown;
-			height: 1px;
-			width: 100%;
-			position: absolute;
+
+			@include mq ('min-lg') {
+				content: "";
+				background-color: $Background-brown;
+				height: 1px;
+				width: 100%;
+				position: absolute;
+			}
 		}
 	}
 
 	&__decoration {
 
 		font-size: 1.8rem;
-		padding: 2px 0;
-		position: relative;
-		text-align: center;
-		width: 30rem;
+		line-height: 1;
+		padding: 1rem;
 		background-color: $Background-brown;
 		border: 1px solid $Background-brown;
 		border-radius: 50px;
 		color: #fff;
+
+		@include mq ('min-lg') {
+			text-align: center;
+			position: relative;
+			width: 30rem;
+		}
+
+		@include mq ('max-lg') {
+			width: 100%;
+			text-align: left;
+		}
 
 		&:hover {
 			background-color: rgb(239, 239, 239);
@@ -45,22 +59,71 @@ $Background-brown :#928572;
 	}
 
 	&__text-2 {
+
 		text-align: center;
 		font-size: 1.8rem;
 		color: $Background-brown;
 
-		span {
+		@include mq ('min-lg') {
+			text-align: center;
+			padding-top: 6rem;
+			padding-bottom: 3rem;
+		}
+
+		@include mq ('max-lg') {
+			text-align: left;
+			padding-top: 1rem;
+			padding-bottom: 2rem;
+		}
+	}
+
+	&__pc-only {
+		display: block;
+
+		@include mq ('max-lg') {
+			display: none;
+		}
+	}
+
+	&__sp-only {
+		display: none;
+
+		@include mq ('max-lg') {
+			display: block;
+		}
+	}
+
+	&__br {
+		padding-top: 1rem;
+		opacity: 0.8;
+
+		@include mq ('min-lg') {
 			font-size: 1rem;
-			opacity: 0.8;
+		}
+
+		@include mq ('max-lg') {
+			font-size: 1.6rem;
 		}
 	}
 
 	&__Card-area {
+		width: 100%;
 		display: flex;
-		justify-content: center;
-		gap: 1.5rem;
+		padding-bottom: 6rem;
+
+		@include mq ('min-lg') {
+			justify-content: center;
+			gap: 1.5rem;
+		}
+
+		@include mq ('max-lg') {
+			flex-direction: column;
+		}
+
+		a {
+			@include mq ('max-lg') {
+				width: 100%;
+			}
+		}
 	}
-
-
-
 }

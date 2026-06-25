@@ -1,35 +1,43 @@
 ---
-import '../styles/style.scss';
-
-import Layout from '../Layouts/Layout.astro';
-import Button from '../components/Button.astro';
+import "../styles/style.scss";
+import ReserveLinkArea from "../components/ReserveLink-area.astro";
+import Layout from "../Layouts/Layout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>外部SCSSのテスト</title>
-</head>
-<body>
-  <Layout>
-    <div class="box">
-      <p>SCSSを使います</p>
-    </div>
-    <p>ここは黒です</p>
-    <p>テストリンク<a href="/">INDEX-TOP</a></p>
-    <p>テストリンク<a href="/index2">INDEX2</a></p>
-    <p>テストリンク<a href="/footer-test">footer-studying</a>
-    <p class="pc-only">PC版です。</p>
-    <p class="sp-only">SP版です。</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>外部SCSSのテスト</title>
+  </head>
+  <body>
+    <Layout>
+      <div class="box">
+        <p>SCSSを使います</p>
+      </div>
+      <p>ここは黒です</p>
+      <p>テストリンク<a href="/">INDEX-TOP</a></p>
+      <p>テストリンク<a href="/index2">INDEX2</a></p>
+      <p>
+        テストリンク<a href="/footer-test">footer-studying</a>
+        <p class="pc-only">PC版です。</p>
+        <p class="sp-only">SP版です。</p>
 
-      <section class="components__block">
-        <h2>Button</h2>
-        <div class="components__preview">
-          <Button href="/footer-test">クリック</Button>
-        </div>
-      </section>
+        <section class="components__block">
+          <h2>Button</h2>
+          <div class="components__preview">
+            <Button href="/footer-test">クリック</Button>
+          </div>
+        </section>
 
-  </Layout>
-</body>
+        <section class="components__block">
+          <h2>Reserve</h2>
+          <div class="components__preview">
+            <ReserveLinkArea text="Itoshima810" />
+          </div>
+        </section>
+      </p>
+    </Layout>
+  </body>
 </html>
