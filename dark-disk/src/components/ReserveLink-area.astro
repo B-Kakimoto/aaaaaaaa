@@ -1,0 +1,37 @@
+---
+import Card from "../pages/card.astro";
+import "../styles/pages/_ReserveLink-area.scss";
+
+interface Props {
+	text?: string;
+}
+
+const { text } = Astro.props;
+---
+
+<div id="Reserve-Block" class="Reserve-Site-area">
+	<div class="Reserve-Site-area__text">
+		<p class="Reserve-Site-area__decoration">Reserve｜予約</p>
+	</div>
+	<p class="Reserve-Site-area__text-2">
+		<span class="Reserve-Site-area__pc-only"
+			>{text} のご予約は下記リンク、予約サイトより。</span
+		>
+		<span class="Reserve-Site-area__sp-only"
+			>{text} のご予約は<br />下記リンク、予約サイトより。</span
+		>
+		<span class="Reserve-Site-area__br">詳細は各サイトにてご確認ください。</span
+		>
+	</p>
+	<ul class="Reserve-Site-area__Card-area">
+		<li class="Reserve-Site-area__Card-Type">
+			<Card href="#" title="Airbub" />
+		</li>
+		<li class="Reserve-Site-area__Card-Type">
+			<Card href="#" title="Rakuten<br>Oyado" />
+		</li>
+		<li class="Reserve-Site-area__Card-Type">
+			<Card href="#" title="Booking.com" />
+		</li>
+	</ul>
+</div>
