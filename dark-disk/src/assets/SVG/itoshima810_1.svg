@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 578.51 93.48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c0b4a8;
+        font-family: AvenirNext-UltraLight, 'AvenirNext UltraLight';
+        font-size: 86px;
+        font-weight: 100;
+      }
+
+      .cls-2 {
+        letter-spacing: .1em;
+      }
+
+      .cls-3 {
+        letter-spacing: .07em;
+      }
+
+      .cls-4 {
+        letter-spacing: .09em;
+      }
+
+      .cls-5 {
+        letter-spacing: .1em;
+      }
+    </style>
+  </defs>
+  <g id="_デザイン" data-name="デザイン">
+    <text class="cls-1" transform="translate(0 71.98)"><tspan class="cls-2" x="0" y="0">I</tspan><tspan class="cls-3" x="29.15" y="0">T</tspan><tspan class="cls-5" x="78.17" y="0">OSHI</tspan><tspan class="cls-4" x="290.85" y="0">M</tspan><tspan class="cls-5" x="367.73" y="0">A810</tspan></text>
+  </g>
+</svg>

@@ -6,6 +6,15 @@ import Layout from "../Layouts/Layout2.astro";
 import "../styles/page2.scss";
 import Button from "../components/Button.astro";
 import ReserveButton from "../components/ReserveButton.astro";
+
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+const svg = Object.values(
+  import.meta.glob<{ default: ImageMetadata }>("/src/assets/SVG/*.svg", {
+    eager: true,
+  }),
+);
 ---
 
 <Layout>
@@ -16,20 +25,28 @@ import ReserveButton from "../components/ReserveButton.astro";
           <h2 class="top-page__m2-h2">PROJECT</h2>
           <div class="top-page__item">
             <ul class="top-page__svg top-page__svg--first">
-              <li class="top-page__project-list1 top-page__li-list">
-                <img
-                  class="top-page__item-svg"
-                  src="/src/image/SVG/itoshima810.svg"
-                  alt=""
-                />
-              </li>
-              <li class="top-page__project-list1 top-page__li-list">
-                <img
-                  class="top-page__item-svg"
-                  src="/src/image/SVG/Itoshima808-1.svg"
-                  alt=""
-                />
-              </li>
+              {
+                svg.map((image) => (
+                  <li class="top-page__project-list1 top-page__li-list">
+                    <Image
+                      class="top-page__item-svg"
+                      src={image.default}
+                      alt=""
+                    />
+                  </li>
+                ))
+              }
+              {
+                svg.map((image) => (
+                  <li class="top-page__project-list1 top-page__li-list">
+                    <Image
+                      class="top-page__item-svg"
+                      src={image.default}
+                      alt=""
+                    />
+                  </li>
+                ))
+              }
             </ul>
             <ul class="top-page__svg top-page__svg--second">
               <li class="top-page__project-list2 top-page__li-list">
