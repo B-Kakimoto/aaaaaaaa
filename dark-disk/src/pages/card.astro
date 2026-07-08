@@ -21,3 +21,31 @@ const { title = "カードタイトル", href = "#" }: Props = Astro.props;
 		</div>
 	</div>
 </a>
+
+<!-- ---
+// src/components/Card.astro
+import '../styles/components/_card.scss';
+
+interface Props {
+  title?: string;
+  href?: string;
+}
+
+const {
+  title = "カードタイトル",
+  href = "#"
+}: Props = Astro.props;
+---
+
+
+<a class="card" href={href}>
+  <div class="card__content">
+    <p class="card__title" set:html={title}></p>
+  </div>
+
+   <div class="card__button-area">
+    <div class="card__btn">
+      <img class="card__btn-icon" src="/src/assets/SVG/white-arrow.svg" alt="">
+    </div>
+  </div>
+</a> -->

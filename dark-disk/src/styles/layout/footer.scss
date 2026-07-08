@@ -202,6 +202,85 @@ img {
 			}
 		}
 	}
+
+	&__lang {
+		@include mq('max-lg') {
+			display: none;
+		}
+
+		@include mq('min-lg') {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__lang-svg {
+		fill: $Background-brown;
+		font-family: AvenirNext-Regular, 'Avenir Next';
+		width: 1.7rem;
+		height: 1.9rem;
+
+	}
+
+	// --- 言語 ---
+	&__lang-btn {
+		background: none;
+		border: none;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+
+		@include mq('max-lg') {
+			color: rgba(73, 60, 60, 0.4);
+			transition: color $transition-fast;
+
+			&.is-active {
+				color: $Background-brown
+			}
+		}
+
+		@include mq('min-lg') {
+			color: rgba(255, 255, 255, 0.4);
+			transition: color $transition-fast;
+
+			&.is-active {
+				color: #ffffff;
+			}
+		}
+	}
+
+	//『言語切替・縦線』
+	&__language-btn-divider {
+		display: inline-block;
+		padding: 0;
+
+		@include mq('max-lg') {
+			width: 1px;
+			height: 17px;
+			background-color: $Background-brown;
+			margin: 0 10px 0 12px; //△仮
+		}
+
+		@include mq('min-lg') {
+			width: 1px;
+			height: 12px;
+			background-color: rgba(255, 255, 255, 0.9);
+			margin: 0 15px 0 14px;
+			padding: 0;
+		}
+	}
+
+	// --- パネル内: 言語 (PC版：表示｜SP版非表示) ---
+	&__panel-lang {
+		@include mq('max-lg') {
+			display: flex;
+			margin: auto 0;
+		}
+
+		@include mq('min-lg') {
+			display: none;
+		}
+	}
 }
 
 @media (max-width :1023px) {
