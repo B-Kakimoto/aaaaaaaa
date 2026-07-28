@@ -1,0 +1,435 @@
+@use "../variables"as *;
+@use "../mixins"as *;
+
+.Reserve-Site-area {
+	$Background-orangebrown: #baa377;
+	background-color: $Background-white;
+	margin: 0 auto;
+
+	body.is-night & {
+		background-color: #432;
+	}
+
+	&--Neutral {
+		border-bottom: 1px solid $Background-brown;
+	}
+
+	body.is-night & {
+		&--night-change {
+			border-bottom: 1px solid $Background-white;
+		}
+	}
+
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+
+		@include mq ('min-lg') {
+			position: relative;
+		}
+
+		@include mq ('min-xl') {
+			position: relative;
+		}
+
+		&--Neutral {
+			&::before {
+				// 線の設定
+
+				@include mq ('min-lg') {
+					content: "";
+					background-color: $Background-brown;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+				}
+
+				@include mq ('min-xl') {
+					content: "";
+					background-color: $Background-brown;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+				}
+			}
+		}
+
+		body.is-night & {
+			&::before {
+				// 線の設定
+
+				@include mq ('min-lg') {
+					content: "";
+					background-color: $Background-white;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+				}
+
+				@include mq ('min-xl') {
+					content: "";
+					background-color: $Background-white;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+				}
+			}
+		}
+	}
+
+	&__decoration {
+
+		display: flex;
+		line-height: 1;
+		padding: 0.9rem;
+		color: #fff;
+
+		body.is-night & {
+			background-color: $Background-orangebrown;
+			border: 1px solid $Background-orangebrown;
+
+			&--night-change {
+				background-color: $Background-orangebrown;
+				border: 1px solid $Background-orangebrown;
+			}
+		}
+
+		&--Neutral {
+			background-color: $Background-brown;
+			border: 1px solid $Background-brown;
+			border-radius: 50px;
+		}
+
+		&--night-change {
+			background-color: $Background-orangebrown;
+			border: 1px solid $Background-orangebrown;
+			border-radius: 50px;
+		}
+
+		@include mq ('min-lg') {
+			justify-content: center;
+			position: relative;
+			width: 30rem;
+		}
+
+		@include mq ('min-xl') {
+			justify-content: center;
+			position: relative;
+			width: 30rem;
+		}
+
+		@include mq ('max-lg') {
+			width: 100%;
+			text-align: left;
+		}
+
+		.span-1 {
+			display: block;
+
+			@include mq ('min-xl') {
+				font-size: 2.1rem;
+			}
+
+			@include mq ('min-lg') {
+				font-size: 2.1rem;
+			}
+
+			@include mq ('max-lg') {
+				// イラストレーター計測
+				// font-size: 3.3rem;
+				// padding-left: 1.5rem;
+
+				font-size: 1.6rem;
+				padding-left: 0.5rem;
+				align-self: self-end;
+			}
+		}
+
+		.span-2 {
+			display: block;
+			width: 1.6px;
+			background-color: #f7f7f5;
+			margin: 0 1.3rem 0 1.1rem;
+			align-self: center;
+
+			@include mq ('min-xl') {
+				height: 2rem;
+			}
+
+			@include mq ('min-lg') {
+				height: 2rem;
+			}
+
+			@include mq ('max-lg') {
+				// イラストレーター計測
+				// height: 3rem;
+
+				height: 1.8rem;
+			}
+		}
+
+		.span-3 {
+			display: block;
+
+			@include mq ('min-xl') {
+				font-size: 1.8rem;
+			}
+
+			@include mq ('min-lg') {
+				font-size: 1.8rem;
+			}
+
+			@include mq ('max-lg') {
+				// イラストレーター計測
+				// font-size: 2.8rem;
+
+				font-size: 1.6rem;
+				align-self: self-start;
+			}
+		}
+	}
+
+	&__text-2 {
+
+		text-align: center;
+		color: $Background-brown;
+		line-height: 1;
+		color: $Background-brown;
+
+		body.is-night & {
+			color: #ffffff;
+		}
+
+		&--Neutral {
+			color: $Background-brown;
+		}
+
+		&--night-change {
+			color: #ffffff;
+		}
+
+		@include mq ('min-lg') {
+			text-align: center;
+			padding-top: 5.6rem;
+			padding-bottom: 3rem;
+			font-size: 2.4rem;
+		}
+
+		@include mq ('min-xl') {
+			text-align: center;
+			padding-top: 5.6rem;
+			padding-bottom: 3rem;
+			font-size: 2.4rem;
+		}
+
+		@include mq ('max-lg') {
+			line-height: 1;
+			text-align: left;
+			padding-top: 1.8rem;
+			padding-bottom: 2.2rem;
+			font-size: 1.6rem;
+		}
+	}
+
+	&__pc-only {
+		display: block;
+
+		@include mq ('max-lg') {
+			display: none;
+		}
+	}
+
+	&__sp-only {
+		display: none;
+
+		@include mq ('max-lg') {
+			display: block;
+
+		}
+	}
+
+	&__br {
+		padding-top: 2rem;
+		opacity: 0.8;
+		display: block;
+
+		@include mq ('min-lg') {
+			font-size: 1.2rem;
+		}
+
+		@include mq ('min-xl') {
+			font-size: 1.2rem;
+		}
+
+		@include mq ('max-lg') {
+			font-size: 1.4rem;
+		}
+	}
+
+	&__Card-area {
+		width: 100%;
+		display: flex;
+		padding-bottom: 6.9rem;
+
+		@include mq ('min-lg') {
+			justify-content: center;
+			gap: 3rem;
+		}
+
+		@include mq ('min-xl') {
+			justify-content: center;
+			gap: 3rem;
+		}
+
+		@include mq ('max-lg') {
+			flex-direction: column;
+			gap: 2rem;
+		}
+
+		&__card {
+			position: relative;
+			background-color: #ffffff;
+			// border: 0.1rem solid #e7e0d8;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			overflow: hidden;
+			width: 100%;
+			transition: transform 0.3s ease;
+			overflow: hidden;
+
+			@include mq('max-lg') {
+				width: 100%;
+				height: 6.5rem;
+			}
+
+			@include mq('min-lg') {
+				width: 100%;
+				height: 12.6rem;
+				cursor: pointer;
+			}
+
+			@include mq('min-xl') {
+				width: 100%;
+				height: 12.6rem;
+				cursor: pointer;
+			}
+
+			&:hover {
+				transform: translateY(-4px);
+
+				.arrow {
+					transform: translateX(4rem);
+					opacity: 0.8;
+				}
+			}
+
+			&__title {
+				font-size: 2.2rem;
+				color: #b09d8b;
+				text-align: center;
+			}
+
+			//  ボタンを右下に配置する為のエリア
+			&__button-area {
+				position: absolute;
+
+				@include mq('max-lg') {
+					right: 3.5%;
+				}
+
+				@include mq('min-lg') {
+					right: 5%;
+					bottom: 10%;
+				}
+
+				@include mq('min-xl') {
+					right: 5%;
+					bottom: 10%;
+				}
+			}
+
+			// 楕円形ボタン
+			&__btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $Background-brown;
+
+				&:hover {
+					opacity: 0.7;
+				}
+
+				@include mq('max-lg') {
+					width: 3rem;
+					height: 2rem;
+					border-radius: 1.7rem;
+				}
+
+				@include mq('min-lg') {
+					width: 3.7rem;
+					height: 1.7rem;
+					border-radius: 7rem;
+				}
+
+				@include mq('min-xl') {
+					width: 3.7rem;
+					height: 1.7rem;
+					border-radius: 7rem;
+				}
+			}
+
+			//  矢印の位置調整
+			&__btn-icon {
+				width: 34.2%;
+				height: auto;
+				display: block;
+				position: absolute;
+				transition: transform 0.5s ease;
+
+				&--transitionA {
+					left: 0;
+				}
+
+				&--transitionB {
+					@include mq('max-lg') {
+						left: -130%;
+					}
+
+					@include mq('min-lg') {
+						left: -105%;
+					}
+
+					@include mq('min-xl') {
+						left: -105%;
+					}
+				}
+
+				@include mq('max-lg') {
+					width: 50%;
+					margin-left: 1rem;
+					transition: transform 0.4s ease;
+				}
+
+				@include mq('min-lg') {
+					margin-left: 1.5rem;
+					transition: transform 0.5s ease;
+				}
+
+				@include mq('min-xl') {
+					margin-left: 1.5rem;
+					transition: transform 0.5s ease;
+				}
+			}
+
+			.pc-only {
+				@include mq('max-lg') {
+					display: none;
+				}
+			}
+		}
+	}
+}

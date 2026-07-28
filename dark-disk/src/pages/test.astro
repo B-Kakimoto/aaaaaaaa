@@ -1,6 +1,7 @@
 ---
 import "../styles/style.scss";
 import ReserveLinkArea from "../components/ReserveLink-area.astro";
+import Doguru from "../components/doguru.astro";
 import Layout from "../Layouts/Layout.astro";
 import Button from "../components/Button.astro";
 ---
@@ -21,23 +22,67 @@ import Button from "../components/Button.astro";
       <p>テストリンク<a href="/index2">INDEX2</a></p>
       <p>
         テストリンク<a href="/footer-test">footer-studying</a>
-        <p class="pc-only">PC版です。</p>
-        <p class="sp-only">SP版です。</p>
-
-        <section class="components__block">
-          <h2>Button</h2>
-          <div class="components__preview">
-            <Button href="/footer-test">クリック</Button>
-          </div>
-        </section>
-
-        <section class="components__block">
-          <h2>Reserve</h2>
-          <div class="components__preview">
-            <ReserveLinkArea text="Itoshima810" />
-          </div>
-        </section>
       </p>
+      <p class="pc-only">PC版です。</p>
+      <p class="sp-only">SP版です。</p>
+
+      <section class="components__block">
+        <h2>Button</h2>
+        <div class="components__preview">
+          <Button href="/footer-test">クリック</Button>
+        </div>
+      </section>
+
+      <section class="components__block">
+        <h2>Reserve</h2>
+        <div class="components__preview1">
+          <ReserveLinkArea
+            text="Itoshima810"
+            title1="Airbnb"
+            title2="Rakuten Oyado"
+            title3="Booking.com"
+            variant="Neutral"
+          />
+        </div>
+      </section>
+
+      <section class="components__block">
+        <h2>Reserve</h2>
+        <div class="components__preview2">
+          <ReserveLinkArea
+            text="Itoshima810"
+            title1="Airbnb"
+            title2="Rakuten Oyado"
+            title3="Booking.com"
+            variant="Neutral"
+          />
+        </div>
+      </section>
+
+      <!-- <section class="components__block">
+          <h2>doguru</h2>
+          <div class="components__preview">
+            <Doguru />
+          </div>
+        </section> -->
+
+      <section class="components__space">
+        <h2>doguru Reserve</h2>
+        <div class="div1">
+          <div class="div1__switch">
+            <Doguru />
+          </div>
+          <div class="div1__Reserve">
+            <ReserveLinkArea
+              text="Itoshima810"
+              title1="Airbnb"
+              title2="Rakuten Oyado"
+              title3="Booking.com"
+              variant="night-change"
+            />
+          </div>
+        </div>
+      </section>
     </Layout>
   </body>
 </html>

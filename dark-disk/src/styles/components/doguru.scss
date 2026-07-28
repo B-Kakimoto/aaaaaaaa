@@ -1,0 +1,145 @@
+@use "../mixins"as *;
+@use "../variables.scss"as *;
+
+.switch {
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	gap: $spacing-sm;
+	position: relative;
+	cursor: pointer;
+}
+
+
+
+// 背景
+.switch__input {
+	position: relative;
+	display: block;
+	width: 77px; //△仮
+	height: 27px; //△仮
+	border: none;
+	background-color: #a09383; //△仮
+	border-radius: 9999px;
+	-webkit-appearance: none;
+	appearance: none;
+	outline: transparent;
+	-webkit-tap-highlight-color: transparent;
+	cursor: pointer;
+	box-shadow:
+		0 0 0 2px hsla(30, 20%, 40%, 0),
+		1px 1px 4px hsla(30, 20%, 10%, 0.2);
+	transition: background-color 0.3s ease;
+
+	&:hover {
+		background-color: #8e8173;
+	}
+
+	/* フォーカスリング */
+
+
+	/* 夜モード時のトラック背景色 */
+	&:checked {
+		background-color: #8a7d6f;
+
+		&:hover {
+			background-color: #7a6e61;
+		}
+	}
+}
+
+
+
+/* ------------------------------------------------
+     Thumb（スライドする白い丸）
+     - ::after 疑似要素で構築（実DOMのspanが不要に）
+     - デフォルト（DAYTIME）: 右側に配置
+     - :checked（NIGHTTIME）: 左側へスライド
+     ------------------------------------------------ */
+.switch__input::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: 51px;
+	width: 22px;
+	height: 22px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	z-index: 0;
+	transition: transform 0.2s ease;
+}
+
+/* 夜モード時：thumb を左端へスライド */
+.switch__input:checked::after {
+	transform: translateX(-47px);
+}
+
+
+
+/* ------------------------------------------------
+   ☀アイコン設定☾
+  ------------------------------------------------ */
+.switch__icon {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	line-height: 1;
+	top: 4px;
+	pointer-events: none;
+	transition: color 0.3s ease;
+	align-items: center;
+
+
+	svg {
+		display: block;
+	}
+}
+
+/* 太陽アイコン（左側に配置） */
+.switch__icon--day {
+	left: 6px;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+/* チェック時：太陽を薄くする */
+.switch__input:checked~.switch__icon--day {
+	color: rgba(255, 255, 255, 0.4);
+}
+
+/* 月アイコン（右側に配置） */
+.switch__icon--night {
+	right: 5px; //△仮
+	top: 5px; //△仮
+	color: rgba(255, 255, 255, 0.4);
+}
+
+/* チェック時：月を明るくする */
+.switch__icon:checked~.switch__icon--night {
+	color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* ------------------------------------------------
+      ラベル（トラック下のテキスト）
+     - DAYTIME / NIGHTTIME を表示
+  ------------------------------------------------ */
+.switch__label {
+	font-family: $font-family-heading;
+	font-size: $font-size-xs;
+	color: $Background-brown;
+	user-select: none;
+	transition: color 0.3s ease;
+
+
+}
+
+/* スクリーンリーダー専用テキスト（視覚的に非表示） */
+.switch__sr {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	clip: rect(0, 0, 0, 0);
+}

@@ -1,0 +1,113 @@
+---
+/**
+ * ImageSwitcher.astro
+ * HTML・JS・scss
+ * 朝 / 夜 トグルスイッチコンポーネント。
+ *
+ * ■ 作り方: CSS-only（checkbox の :checked でアニメーション制御）
+ * ■ デザイン: 旧バージョン（茶系トラック、白Thumb、左に太陽・右に月）
+ * ■ JS: body.is-night クラス切替 + 画像 src 切替のみ
+ */
+import "../styles/components/doguru.scss";
+---
+
+<!-- トグルスイッチ -->
+<label class="switch" id="dayNightToggle">
+	<!-- checkbox がトラック本体（appearance: none でカスタマイズ） -->
+	<input class="switch__input" type="checkbox" role="switch" id="switchInput" />
+
+	<!-- △仮 --><!-- 太陽アイコン（トラック左側に配置） -->
+	<span class="switch__icon switch__icon--day" aria-hidden="true">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 29.2 32.91"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="1.5"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			width="20"
+			height="20"
+		>
+			<path
+				class="cls-1"
+				d="M14.61,7.87c2.36,0,4.5.97,6.05,2.51s2.51,3.71,2.51,6.07-.94,4.5-2.51,6.07c-1.54,1.54-3.69,2.51-6.05,2.51s-4.53-.97-6.07-2.51c-1.54-1.57-2.51-3.71-2.51-6.07s.97-4.5,2.51-6.07c1.54-1.54,3.69-2.51,6.07-2.51h0ZM20.01,11.03c-1.37-1.37-3.3-2.23-5.41-2.23s-4.03.86-5.43,2.23c-1.39,1.39-2.25,3.3-2.25,5.43s.86,4.03,2.25,5.43c1.39,1.37,3.3,2.23,5.43,2.23s4.03-.86,5.41-2.23,2.25-3.3,2.25-5.43-.86-4.03-2.25-5.43h0Z"
+			></path>
+			<path
+				class="cls-1"
+				d="M15.06,4.83c0,.26-.21.45-.45.45-.26,0-.47-.19-.47-.45V.45c0-.24.21-.45.47-.45.24,0,.45.21.45.45v4.38ZM4.76,10.25c.21.13.28.41.17.62-.13.21-.41.28-.62.15l-3.8-2.19c-.21-.11-.28-.39-.17-.6.13-.24.41-.3.62-.17l3.8,2.19ZM4.31,21.88c.21-.13.49-.06.62.15.11.24.04.49-.17.62l-3.8,2.19c-.21.13-.49.06-.62-.15-.11-.24-.04-.49.17-.62l3.8-2.19ZM14.14,28.08c0-.26.21-.45.47-.45.24,0,.45.19.45.45v4.38c0,.26-.21.45-.45.45-.26,0-.47-.19-.47-.45v-4.38ZM24.43,22.65c-.21-.13-.28-.39-.15-.62.11-.21.39-.28.6-.15l3.8,2.19c.21.13.3.39.17.62-.13.21-.41.28-.62.15l-3.8-2.19ZM24.88,11.03c-.21.13-.49.06-.6-.15-.13-.21-.06-.49.15-.62l3.8-2.19c.21-.13.49-.06.62.17.13.21.04.49-.17.6l-3.8,2.19ZM9.18,6.16c.13.21.04.49-.17.62-.21.13-.49.04-.62-.17l-1.24-2.19c-.13-.21-.06-.49.15-.6.21-.13.49-.06.62.15l1.27,2.19ZM2.98,16c.24,0,.45.19.45.45s-.21.45-.45.45H.45c-.26,0-.45-.19-.45-.45s.19-.45.45-.45h2.53ZM8.39,26.3c.13-.21.41-.3.62-.17s.3.41.17.62l-1.27,2.19c-.13.21-.41.28-.62.17-.21-.13-.28-.41-.15-.62l1.24-2.19ZM20.01,26.75c-.13-.21-.04-.49.17-.62.21-.13.49-.04.62.17l1.27,2.19c.13.21.04.49-.17.62-.21.11-.49.04-.62-.17l-1.27-2.19ZM26.24,16.9c-.26,0-.47-.19-.47-.45s.21-.45.47-.45h2.51c.26,0,.45.19.45.45s-.19.45-.45.45h-2.51ZM20.81,6.61c-.13.21-.41.3-.62.17-.21-.13-.3-.41-.17-.62l1.27-2.19c.13-.21.41-.28.62-.15.21.11.3.39.17.6l-1.27,2.19Z"
+			></path>
+		</svg>
+	</span>
+
+	<!-- △仮 --><!-- 月アイコン（トラック右側に配置） -->
+	<span class="switch__icon switch__icon--night" aria-hidden="true">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 28.41 29.22"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="1.5"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			width="18"
+			height="18"
+		>
+			<path
+				class="cls-1"
+				d="M14.61,0h.43c.21,0,.39.09.54.19.15.13.26.28.3.49.04.19.02.39-.04.56-.09.17-.21.32-.39.41-.49.28-.99.58-1.44.94-.45.32-.88.71-1.31,1.12-2.19,2.21-3.37,5.02-3.48,7.79-.13,2.75.82,5.45,2.83,7.47,1.95,1.95,4.55,2.87,7.23,2.83,2.68-.04,5.43-1.12,7.64-3.15.15-.13.34-.21.54-.24.19,0,.39.04.56.15.17.13.3.28.34.47.06.17.06.39,0,.58-1.03,2.83-2.94,5.28-5.36,6.97-2.38,1.67-5.28,2.64-8.39,2.64-4.03,0-7.68-1.63-10.32-4.27C1.63,22.31,0,18.64,0,14.61S1.63,6.93,4.29,4.27C6.93,1.63,10.58,0,14.61,0h0ZM14.82.9h-.21c-3.78,0-7.21,1.54-9.7,4.01C2.45,7.4.9,10.83.9,14.61s1.54,7.21,4.01,9.7c2.49,2.49,5.92,4.01,9.7,4.01,2.94,0,5.64-.92,7.87-2.47,2.25-1.59,4.01-3.84,5-6.48-2.38,2.17-5.32,3.28-8.19,3.32-2.9.06-5.75-.97-7.87-3.09-2.21-2.21-3.22-5.15-3.09-8.15.11-2.98,1.37-6.01,3.73-8.39.45-.43.92-.84,1.42-1.2.47-.36.97-.69,1.46-.97h-.11Z"
+			></path>
+		</svg>
+	</span>
+
+	<!-- スクリーンリーダー用ラベル -->
+	<span class="switch__sr">朝と夜の表示を切り替える</span>
+	<!-- トラック下のラベル表示 -->
+	<span class="switch__label" id="switchLabel">DAYTIME</span>
+</label>
+
+<script>
+	/**
+	 * JS の役割は2つだけ:
+	 * 1. body に .is-night クラスを切り替える
+	 * 2. data-day-src / data-night-src を元に画像の src を切り替える
+	 */
+	document.addEventListener("DOMContentLoaded", () => {
+		const input = document.getElementById("switchInput") as HTMLInputElement;
+		const label = document.getElementById("switchLabel");
+
+		if (!input || !label) return;
+
+		// 夜画像を先読み
+		document
+			.querySelectorAll<HTMLImageElement>("[data-night-src]")
+			.forEach((img) => {
+				const nightSrc = img.dataset.nightSrc;
+
+				if (nightSrc) {
+					const preload = new Image();
+					preload.src = nightSrc;
+				}
+			});
+		input.addEventListener("change", () => {
+			const isNight = input.checked;
+			document.body.classList.toggle("is-night", isNight);
+			label.textContent = isNight ? "NIGHTTIME" : "DAYTIME";
+
+			switchImages(isNight);
+		});
+	});
+
+	/** data-day-src / data-night-src を元に全画像の src を切り替える */
+	function switchImages(isNight: boolean): void {
+		const images =
+			document.querySelectorAll<HTMLImageElement>("[data-day-src]");
+
+		images.forEach((img) => {
+			const newSrc = isNight ? img.dataset.nightSrc : img.dataset.daySrc;
+			if (newSrc) {
+				img.src = newSrc;
+			}
+		});
+	}
+</script>

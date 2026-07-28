@@ -119,43 +119,9 @@ const {
 	</div>
 </div>
 
-<!-- ---
-import "../styles/pages/_ReserveLink-area.scss";
-
-interface Props {
-	text?: string;
-	title1?: string;
-	title2?: string;
-	title3?: string;
-	href1?: string;
-	href2?: string;
-	href3?: string;
-	variant?: string;
-}
-
-const {
-	text = "テキスト",
-	title1 = "カードタイトル",
-	title2 = "カードタイトル",
-	title3 = "カードタイトル",
-	href1 = "#",
-	href2 = "#",
-	href3 = "#",
-	variant = "Neutral",
-}: Props = Astro.props;
----
-
-<div
-	id="Reserve-Block"
-	class={`Reserve-Site-area Reserve-Site-area--${variant}`}
->
-	<div class={`Reserve-Site-area__text Reserve-Site-area__text--${variant}`}>
-		<p
-			class={`Reserve-Site-area__decoration Reserve-Site-area__decoration--${variant}`}
-		>
-			<span class="span-1">Reserve</span><span class="span-2" aria-hidden="true"
-			></span><span class="span-3">予約</span>
-		</p>
+<!-- <div id="Reserve-Block" class="Reserve-Site-area">
+	<div class="Reserve-Site-area__text">
+		<p class="Reserve-Site-area__decoration">Reserve｜予約</p>
 	</div>
 	<p class="Reserve-Site-area__text-2">
 		<span class="Reserve-Site-area__pc-only"
@@ -167,59 +133,15 @@ const {
 		<span class="Reserve-Site-area__br">詳細は各サイトにてご確認ください。</span
 		>
 	</p>
-	<div id="CARD" class="Reserve-Site-area__Card-area">
-		<a class="Reserve-Site-area__Card-area__card" href={href1}>
-			<div class="Reserve-Site-area__Card-area__card__content">
-				<p
-					class="Reserve-Site-area__Card-area__card__title"
-					set:html={title1}
-				/>
-			</div>
-			<div class="Reserve-Site-area__Card-area__card__button-area">
-				<div class="Reserve-Site-area__Card-area__card__btn">
-					<img
-						class="Reserve-Site-area__Card-area__card__btn-icon"
-						src="/src/assets/SVG/white-arrow.svg"
-						alt=""
-					/>
-				</div>
-			</div>
-		</a>
-
-		<a class="Reserve-Site-area__Card-area__card" href={href2}>
-			<div class="Reserve-Site-area__Card-area__card__content">
-				<p
-					class="Reserve-Site-area__Card-area__card__title"
-					set:html={title2}
-				/>
-			</div>
-			<div class="Reserve-Site-area__Card-area__card__button-area">
-				<div class="Reserve-Site-area__Card-area__card__btn">
-					<img
-						class="Reserve-Site-area__Card-area__card__btn-icon"
-						src="/src/assets/SVG/white-arrow.svg"
-						alt=""
-					/>
-				</div>
-			</div>
-		</a>
-
-		<a class="Reserve-Site-area__Card-area__card" href={href3}>
-			<div class="Reserve-Site-area__Card-area__card__content">
-				<p
-					class="Reserve-Site-area__Card-area__card__title"
-					set:html={title3}
-				/>
-			</div>
-			<div class="Reserve-Site-area__Card-area__card__button-area">
-				<div class="Reserve-Site-area__Card-area__card__btn">
-					<img
-						class="Reserve-Site-area__Card-area__card__btn-icon"
-						src="/src/assets/SVG/white-arrow.svg"
-						alt=""
-					/>
-				</div>
-			</div>
-		</a>
-	</div>
+	<ul class="Reserve-Site-area__Card-area">
+		<li class="Reserve-Site-area__Card-Type">
+			<Card href="#" title="Airbub" />
+		</li>
+		<li class="Reserve-Site-area__Card-Type">
+			<Card href="#" title="Rakuten<br>Oyado" />
+		</li>
+		<li class="Reserve-Site-area__Card-Type">
+			<Card href="#" title="Booking.com" />
+		</li>
+	</ul>
 </div> -->

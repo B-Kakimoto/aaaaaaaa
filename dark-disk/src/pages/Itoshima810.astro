@@ -1,0 +1,132 @@
+---
+import Layout from "../Layouts/Layout2.astro";
+import "../styles/pages/Itoshima810.scss";
+import ReserveButton from "../components/ReserveButton.astro";
+import Doguru from "../components/doguru.astro";
+---
+
+<Layout>
+	<main>
+		<section class="itoshima810" id="site-itoshima810">
+			<div class="itoshima810__content">
+				<div class="itoshima810__mainvisual">
+					<img class="hero__image" src="#" alt="メインビジュアル" />
+				</div>
+				<div class="itoshima810__logo">
+					<img src="#" alt="itoshima810のロゴ" />
+				</div>
+			</div>
+		</section>
+
+		<section class="itoshima810__Villa-Resort">
+			<h1 class="itoshima810__title">
+				思い思いの時間を過ごす、
+				<br />
+				集うホテル。
+			</h1>
+
+			<!-- 画像 -->
+			<h1 class="itoshima810__catch">
+				<img
+					class="itoshima810__hero-title"
+					src="#"
+					alt="itoshima810 Villa＆Resort"
+				/>
+			</h1>
+
+			<p class="itoshima810__Villa-Resort-text">
+				大人数でも、ゆったりとくつろげる。
+				<br />
+				のびやかな余白が心をほどく、糸島のヴィラリゾート。
+			</p>
+
+			<div class="itoshima810__reservation-button">
+				<ReserveButton />
+			</div>
+		</section>
+
+		<div class="itoshima810__visual">
+			<img
+				class="itoshima810__villa-inner"
+				src="#"
+				data-day-src="#"
+				data-night-src="#"
+				alt="メインビジュアル"
+			/>
+		</div>
+
+		<section class="villa" id="villa-section">
+			<div class="villa__switcher">
+				<Doguru />
+			</div>
+
+			<div class="villa__upper" id="villa-upper">
+				<div class="villa__content" id="villa-content">
+					<h1 class="villa__title">
+						ITOSHIMA<span class="villa__title-num">810</span>
+					</h1>
+					<div class="villa__text">
+						<p>
+							糸島の自然に囲まれた、広々とした敷地に佇む一棟。<br />
+							季節の移ろいを肌で感じるプライベートガーデン。
+						</p>
+
+						<p>
+							大人数でもゆったりくつろげる、<br />
+							空間に合わせてデザイン家具を設えたリビングで<br />
+							穏やかな時間をお過ごしください。
+						</p>
+
+						<p>
+							にぎやかな語らいも、静けさも、<br />
+							すべてが心地よく流れていく。<br />
+							大切な人たちと集い、過ごすためのホテルです
+						</p>
+					</div>
+				</div>
+
+				<figure class="villa__figure villa__figure--01" id="figure-01">
+					<img
+						src="#"
+						width="690"
+						height="670"
+						alt=" "
+						loading="lazy"
+						decoding="auto"
+						data-day-src="#"
+						data-night-src="#"
+					/>
+					<figcaption class="villa__caption">PRIVATE GARDEN</figcaption>
+				</figure>
+			</div>
+
+			<div class="villa__lower" id="villa-lower">
+				<figure class="villa__figure villa__figure--02" id="figure-02">
+					<img
+						src="#"
+						width="380"
+						height="448"
+						alt=" "
+						decoding="auto"
+						data-day-src="#"
+						data-night-src="#"
+					/>
+					<figcaption class="villa__caption">ENGAWA</figcaption>
+				</figure>
+
+				<figure class="villa__figure villa__figure--03" id="figure-03">
+					<img
+						src="#"
+						width="1100"
+						height="733"
+						alt=" "
+						decoding="auto"
+						data-day-src="#"
+						data-night-src="#"
+					/>
+					<figcaption class="villa__caption">LIVING ROOM</figcaption>
+				</figure>
+			</div>
+		</section>
+	</main>
+</Layout>

@@ -1,0 +1,370 @@
+@use "../variables"as *;
+@use "../mixins"as *;
+
+.itoshima810 {
+
+	// ---------------------------------------------------------
+	// メインビジュアル
+	// ---------------------------------------------------------
+	&__content {
+		position: relative;
+	}
+
+	&__logo {
+		position: absolute;
+		width: 13%;
+		top: 74%;
+		left: 42.5%;
+		margin: 0 auto;
+	}
+
+
+
+	// ---------------------------------------------------------
+	// 大テキスト＋ロゴ＋小テキスト＋予約ボタン
+	// ---------------------------------------------------------
+	&__Villa-Resort {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+		background-color: #e9e5e1;
+		padding-top: 100px;
+		padding-bottom: 100px;
+
+	}
+
+	&__title {
+		font-size: 3.2rem;
+		color: $Background-brown; //△仮
+		padding: 0;
+		margin-bottom: 69px; //△仮
+
+	}
+
+	&__catch {
+		padding: 0;
+		margin-bottom: 75px;
+
+	}
+
+	&__Villa-Resort-text {
+		color: $Background-brown; //△仮
+		margin-bottom: 65px;
+
+	}
+
+	&__reservation-button {
+		width: 100%;
+		display: contents;
+
+	}
+
+	// &__visual {
+	//   margin-bottom: 25px; //■仮
+
+	// }
+}
+
+.villa {
+	//----------------------------------------
+	// --- セクション全体 ---
+	background-color: #eae5e0; //△仮
+
+	body.is-night & {
+		background-color: #928572;
+	}
+
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	inline-size: 100%;
+	min-block-size: 100vh; //△仮
+	padding-block-start: 8rem;
+	padding-inline-end: 8rem;
+	overflow: hidden;
+
+	@include mq('max-lg') {
+		min-block-size: auto;
+		padding-block-start: 6rem;
+		padding-block-end: 6rem;
+	}
+
+	// ---------------------------------------------------------
+	// ドグルスイッチ
+	&__switcher {
+		align-self: center;
+		margin-block-start: 0rem;
+		margin-block-end: 0.8rem;
+		// padding-inline-start: 25rem;
+	}
+
+	// ---------------------------------------------------------   
+
+	// ---------------------------------------------------------
+	//上部エリア（テキスト + 一枚目画像）
+	.villa__upper {
+		flex-direction: row; // 横並び
+		align-items: flex-start;
+		justify-content: space-between;
+
+		@include mq('max-lg') {
+			display: block;
+			inline-size: 100%;
+		}
+
+		@include mq('min-lg') {
+			display: flex;
+			inline-size: 100%;
+		}
+
+		@include mq('min-xl') {
+			display: flex;
+			inline-size: 100%;
+		}
+	}
+
+	// ---------------------------------------------------------
+	// ---------------------------------------------------------
+	//--- テキストコンテンツ
+	.villa__content {
+
+		@include mq('max-lg') {
+			margin-inline-start: 37%;
+			padding-block-start: 6rem;
+		}
+
+		@include mq('min-lg') {
+			margin-inline-start: 37%;
+			padding-block-start: 6rem;
+		}
+
+		@include mq('min-xl') {
+			margin-inline-start: 37%;
+			padding-block-start: 6rem;
+			inline-size: 50%;
+			max-inline-size: 100%;
+		}
+	}
+
+	// --- タイトル ---
+	.villa__title {
+		letter-spacing: 0.09em;
+		line-height: 1.2;
+		color: #3a3a3a;
+
+		@include mq('max-lg') {
+			font-size: 4.3rem; // △仮
+			font-weight: 300; // △仮
+			margin-block-end: 3.5rem; // △仮
+		}
+
+		@include mq('min-lg') {
+			font-size: 8.6rem; // △仮
+			font-weight: 300;
+			margin-inline-start: -31.1rem;
+		}
+
+		@include mq('min-xl') {
+			font-size: 8.6rem;
+			font-weight: 300;
+			margin-inline-start: -31.1rem;
+		}
+
+
+		&-num {
+			font-weight: 400;
+		}
+	}
+
+	// --- 説明テキスト ---
+	.villa__text {
+
+		// letter-spacing: 0.05em;
+		body.is-night & {
+			color: rgba(245, 240, 235, 0.7);
+		}
+
+		@include mq('max-lg') {
+			font-size: 1.4rem;
+			line-height: 2;
+		}
+
+		@include mq('min-lg') {
+			font-size: 1.8rem;
+			max-width: 432px;
+			margin-inline-start: -13.5rem;
+			margin-block-start: 6.9rem;
+			line-height: 2.1222;
+		}
+
+		@include mq('min-xl') {
+			font-size: 1.8rem;
+			max-width: 432px;
+			margin-inline-start: -13.5rem;
+			margin-block-start: 6.9rem;
+			line-height: 2.1222;
+		}
+
+		p+p {
+			margin-block-start: 1.5em;
+		}
+
+	}
+
+	/* ============================================
+  * 画像の共通スタイル
+  * ============================================ */
+	.villa__figure {
+		position: relative;
+
+		img {
+			inline-size: 100%;
+			block-size: auto;
+			object-fit: cover;
+		}
+	}
+
+	/* ============================================ 
+  * キャプション（figcaption）の共通スタイル
+  * ============================================ */
+	.villa__caption {
+		letter-spacing: 0.15em;
+		writing-mode: vertical-rl; // ★ ユーザーの元コードの機能を維持
+		text-orientation: mixed;
+		white-space: nowrap;
+		position: absolute;
+		z-index: 2;
+
+		:global(body.is-night) & {
+			color: rgba(245, 240, 235, 0.5);
+		}
+	}
+
+	/* ============================================
+  * 一枚目の画像（右上）→ 右端にぴったり
+  * ============================================ */
+	.villa__figure--01 {
+		flex-grow: 0;
+		flex-shrink: 0;
+		inset-inline-end: 5.4rem;
+		margin-inline-start: auto; // ★ 右端へ寄せる
+		margin-inline-end: 0;
+		inline-size: 62.3%;
+		max-inline-size: 85rem; // ★ 上限（790px）
+		z-index: 1;
+
+		@include mq('max-lg') {
+			width: 200px;
+			inset-inline-end: -8rem;
+		}
+
+		@include mq('min-lg') {
+			inset-inline-end: -7.9rem;
+		}
+
+		@include mq('min-xl') {
+			inset-inline-end: -7.9rem;
+		}
+
+		.villa__caption,
+		.hero__caption {
+			left: 0;
+			bottom: 0;
+			top: auto; // 物理プロパティで確実に左下へ固定
+			inset-block-end: 0;
+			transform: translateX(-100%);
+			margin-left: -1rem; // ★ 画像との隙間を調整！
+			inset-block-start: auto;
+		}
+
+		@include mq('max-lg') {
+			font-size: 1.1rem;
+		}
+
+	}
+
+	/* ============================================
+  * 下部エリア（二枚目 + 三枚目）
+  * ============================================ */
+	.villa__lower {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		inline-size: 100%;
+	}
+
+
+	/* ============================================
+  * 二枚目の画像（左下）→ 左端に隙間を空ける
+  * ============================================ */
+	.villa__figure--02 {
+		align-self: flex-start;
+		flex-shrink: 0;
+		inline-size: 25%; // ★ %で伸縮対応
+		max-inline-size: 38rem; // ★ 上限（380px相当）
+		// margin-block-start: -7rem;      // ★ ネガティブマージンで上部と重ねる
+		z-index: 1;
+
+		@include mq('max-lg') {
+			width: 200px;
+			// inset-inline-start: -1rem; 
+		}
+
+		@include mq('min-lg') {
+			// inset-inline-start: -1rem; 
+		}
+
+		@include mq('min-xl') {
+			// inset-inline-start: -0.1rem; 
+		}
+
+		.villa__caption {
+			inset-inline-end: 0;
+			inset-block-start: 0;
+			transform: translateX(100%);
+			margin-right: -1rem; // ★ 画像との隙間を調整！
+
+			@include mq('max-lg') {
+				font-size: 1.1rem;
+			}
+
+		}
+	}
+
+
+	/* ============================================
+  * 三枚目の画像（右下）→ 右端から少し空ける
+  * ============================================ */
+	.villa__figure--03 {
+		align-self: flex-end;
+		flex-shrink: 0;
+		inline-size: 52%; // ★ 58%から52%に少し縮め、左側の余白を確保
+		max-inline-size: 110rem; // ★ 上限（1100px相当）
+		margin-inline-end: 4%; // ★ 右端からの隙間（右寄りに調整し、左側にテキスト用の余白を確保）
+		margin-block-start: -6rem; // ★ ネガティブマージンで上部と重ねる
+		z-index: 1;
+
+		.villa__caption,
+		.hero__caption {
+			left: 0;
+			bottom: 0;
+			top: auto; // 物理プロパティで確実に左下へ固定
+			inset-inline-start: 0;
+			inset-block-end: 0; // 縦位置：一番下（左下）
+			transform: translateX(-100%); // 画像の外側（左）へ押し出す
+			margin-left: -1rem; // ★ 画像との隙間を調整！
+			inset-block-start: auto; // デフォルトの上端配置を解除
+
+			@include mq('max-lg') {
+				font-size: 1.1rem;
+			}
+
+		}
+	}
+
+
+
+
+}

@@ -1,11 +1,17 @@
 @use '../mixins.scss'as *;
 @use '../variables.scss'as *;
 
-$Background-brown :#928572;
-
 .Reserve-Site-area {
-	border-bottom: 1px solid $Background-brown;
+	$Background-orangebrown: #baa377;
 	margin: 0 auto;
+
+	&--Neutral {
+		border-bottom: 1px solid $Background-brown;
+	}
+
+	&--night-change {
+		border-bottom: 1px solid $Background-white;
+	}
 
 	&__text {
 		display: flex;
@@ -17,45 +23,85 @@ $Background-brown :#928572;
 			position: relative;
 		}
 
-		&::before {
-			// 線の設定
+		&--Neutral {
+			&::before {
+				// 線の設定
 
-			@include mq ('min-lg') {
-				content: "";
-				background-color: $Background-brown;
-				height: 1px;
-				width: 100%;
-				position: absolute;
+				@include mq ('min-lg') {
+					content: "";
+					background-color: $Background-brown;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+				}
 			}
+		}
 
+		&--night-change {
+			&::before {
+				// 線の設定
+
+				@include mq ('min-lg') {
+					content: "";
+					background-color: $Background-white;
+					height: 1px;
+					width: 100%;
+					position: absolute;
+				}
+			}
 		}
 	}
 
 	&__decoration {
 
-		font-size: 1.8rem;
+		display: flex;
+		align-items: center;
 		line-height: 1;
 		padding: 1rem;
-		background-color: $Background-brown;
-		border: 1px solid $Background-brown;
-		border-radius: 50px;
 		color: #fff;
 
+		&--Neutral {
+			background-color: $Background-brown;
+			border: 1px solid $Background-brown;
+			border-radius: 50px;
+		}
+
+		&--night-change {
+			background-color: $Background-orangebrown;
+			border: 1px solid $Background-orangebrown;
+			border-radius: 50px;
+		}
+
+		.span-1 {
+			display: block;
+			padding-left: 1.5rem;
+			font-size: 3.3rem;
+		}
+
+		.span-2 {
+			display: block;
+			width: 2px;
+			background-color: #f7f7f5;
+			height: 3rem;
+			margin: 0 2.3rem 0 2.1rem;
+		}
+
+		.span-3 {
+			display: block;
+			font-size: 2.8rem;
+		}
+
 		@include mq ('min-lg') {
+			font-size: 1.8rem;
 			text-align: center;
 			position: relative;
 			width: 30rem;
 		}
 
 		@include mq ('max-lg') {
+			font-size: 3rem;
 			width: 100%;
 			text-align: left;
-		}
-
-		&:hover {
-			background-color: rgb(239, 239, 239);
-			color: $Background-brown;
-			border: 1px solid $Background-brown;
 		}
 	}
 
@@ -120,19 +166,113 @@ $Background-brown :#928572;
 		@include mq ('max-lg') {
 			flex-direction: column;
 		}
-	}
-
-	&__Card-Type {
-		@include mq ('min-lg') {
-			width: 32%;
-		}
-
-		@include mq ('max-lg') {
-			width: 100%;
-		}
 
 		a {
-			width: 100%;
+			@include mq ('max-lg') {
+				width: 100%;
+			}
 		}
+
+		&__card {
+			position: relative;
+			background-color: #ffffff;
+			border: 0.1rem solid #e7e0d8;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			overflow: hidden;
+			width: 100%;
+
+			@include mq('max-lg') {
+				width: 65rem;
+				height: 10rem;
+			}
+
+			@include mq('min-lg') {
+				width: 33rem;
+				height: 12.6rem;
+				cursor: pointer;
+			}
+
+			&:hover {
+				transform: translateY(-4px);
+			}
+
+			&__title {
+				font-size: 2rem;
+				color: #b09d8b;
+				text-align: center;
+			}
+
+
+			//  ボタンを右下に配置する為のエリア
+			&__button-area {
+				position: absolute;
+
+				@include mq('max-lg') {
+					bottom: 28%;
+					right: 3.5%;
+				}
+
+				@include mq('min-lg') {
+					right: 5%;
+					bottom: 10%;
+				}
+
+
+			}
+
+			// 楕円形ボタン
+			&__btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: $Background-brown;
+
+				&:hover {
+					opacity: 0.7;
+
+					.card__btn-icon {
+						transform: translateX(-1rem);
+					}
+				}
+
+				@include mq('max-lg') {
+					width: 7.3rem;
+					height: 4rem;
+					border-radius: 1.7rem;
+				}
+
+				@include mq('min-lg') {
+					width: 3.7rem;
+					height: 1.7rem;
+					border-radius: 7rem;
+				}
+			}
+
+			//  矢印の位置調整
+			&__btn-icon {
+				width: 34.2%;
+				height: auto;
+				display: block;
+				transition: transform 0.3s ease;
+
+				@include mq('max-lg') {
+					margin-left: 2.5rem;
+				}
+
+				@include mq('min-lg') {
+					margin-left: 1.5rem;
+				}
+			}
+
+			.pc-only {
+				@include mq('max-lg') {
+					display: none;
+				}
+			}
+		}
+
 	}
 }
