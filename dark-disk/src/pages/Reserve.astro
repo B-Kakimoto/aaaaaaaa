@@ -1,6 +1,5 @@
 ---
 import Layout from "../Layouts/Layout2.astro";
-import ReserveButton from "../components/ReserveButton.astro";
 import Card from "../pages/card.astro";
 import "../styles/pages/Reserve.scss";
 
@@ -9,6 +8,13 @@ interface Props {
 }
 
 const { text } = Astro.props;
+
+interface Props {
+	title?: string;
+	href?: string;
+}
+
+const { title = "カードタイトル", href = "#" }: Props = Astro.props;
 ---
 
 <Layout>
@@ -34,3 +40,19 @@ const { text } = Astro.props;
 		</ul>
 	</div>
 </Layout>
+
+<a class="card" href={href}>
+	<div class="card__content">
+		<p class="card__title" set:html={title} />
+	</div>
+
+	<div class="card__button-area">
+		<div class="card__btn">
+			<img
+				class="card__btn-icon"
+				src="/src/assets/SVG/white-arrow.svg"
+				alt=""
+			/>
+		</div>
+	</div>
+</a>
