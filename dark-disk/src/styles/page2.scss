@@ -175,12 +175,20 @@
     list-style: none;
   }
 
-  &__movie-list {
-    &:nth-child(1) {
+  &__movie-svg-list {
+    &:nth-child(1) .top-page__movie-list:nth-child(1) {
       width: 350px;
       height: 200px;
       border-radius: 25px;
       background-image: url('../image/1-movie-1.webp');
+      background-size: cover;
+    }
+
+    &:nth-child(2) .top-page__movie-list:nth-child(1) {
+      width: 350px;
+      height: 200px;
+      border-radius: 25px;
+      background-image: url('../image/1-movie-2.webp');
       background-size: cover;
     }
 
@@ -413,11 +421,11 @@
   #mainvisual-top1 {
 
 
-    .mainvisual2 {
+    .top-page__mainvisual2 {
 
 
-      .Project {
-        .item {
+      .top-page__Project {
+        .top-page__item {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -447,7 +455,7 @@
         }
 
 
-        .button-group {
+        .top-page__button-group {
           margin: 0 auto;
           display: flex;
           gap: 20px;
@@ -489,10 +497,10 @@
       }
 
 
-      .Movie {
+      .top-page__Movie {
         padding: 10rem 4rem 30rem 4rem;
 
-        nav {
+        .top-page__movie-svg {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -550,10 +558,10 @@
       }
     }
 
-    .mainvisual1 {
+    .top-page__mainvisual1 {
 
 
-      .heading {
+      .top-page__heading {
         height: 350px;
         font-size: 22px;
         line-height: 2.5;
@@ -564,7 +572,7 @@
 
 
   #mainvisual-top2 {
-    .media {
+    .top-page__media {
       background-color: rgb(209, 209, 209);
       text-align: center;
       padding: 8rem 0 14rem 0;
@@ -573,7 +581,7 @@
         text-align: center;
       }
 
-      .magazine {
+      .top-page__magazine {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -603,31 +611,29 @@
     }
 
 
-    .STAY-in-DESIGN {
+    .top-page__STAY-in-DESIGN {
       background-color: rgb(239, 239, 239);
 
-      .text-area {
+      .top-page__text-area {
 
         h1 {
           margin-bottom: 10rem;
           font-size: 32px;
         }
 
-        nav {
+        .top-page__footer-about {
           padding-bottom: 120px;
 
-          ul {
-            margin: 0;
-            list-style: none;
-            text-align: center;
+          margin: 0;
+          list-style: none;
+          text-align: center;
 
-            li {
-              &:nth-child(1) {
-                padding: 50px 0;
+          li {
+            &:nth-child(1) {
+              padding: 50px 0;
 
-                a {
-                  width: 200px;
-                }
+              a {
+                width: 200px;
               }
             }
           }
