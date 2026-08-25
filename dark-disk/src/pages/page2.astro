@@ -8,13 +8,11 @@ import Button from "../components/Button.astro";
 import ReserveButton from "../components/ReserveButton.astro";
 
 import { Image } from "astro:assets";
-import type { ImageMetadata } from "astro";
+import itoshima810Logo from "../assets/SVG/itoshima810.svg";
+import itoshima808Logo from "../assets/SVG/itoshima808-1.svg";
 
-const svg = Object.values(
-  import.meta.glob<{ default: ImageMetadata }>("/src/assets/SVG/*.svg", {
-    eager: true,
-  }),
-);
+// PROJECTカードで使用するロゴだけを明示的に指定する。
+const projectLogos = [itoshima810Logo, itoshima808Logo];
 ---
 
 <Layout>
@@ -26,22 +24,11 @@ const svg = Object.values(
           <div class="top-page__item">
             <ul class="top-page__svg top-page__svg--first">
               {
-                svg.map((image) => (
+                projectLogos.map((image) => (
                   <li class="top-page__project-list1 top-page__li-list">
                     <Image
                       class="top-page__item-svg"
-                      src={image.default}
-                      alt=""
-                    />
-                  </li>
-                ))
-              }
-              {
-                svg.map((image) => (
-                  <li class="top-page__project-list1 top-page__li-list">
-                    <Image
-                      class="top-page__item-svg"
-                      src={image.default}
+                      src={image}
                       alt=""
                     />
                   </li>
