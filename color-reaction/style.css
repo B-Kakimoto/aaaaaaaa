@@ -1,0 +1,65 @@
+:root {
+  color-scheme: dark;
+  --ink: #121017;
+  --paper: #f6f0e5;
+  --accent: #ff4d6d;
+  --muted: #817985;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--paper);
+  background:
+    radial-gradient(circle at 85% 10%, #35265e 0, transparent 32rem),
+    radial-gradient(circle at 10% 90%, #1c5961 0, transparent 26rem),
+    var(--ink);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.game-shell {
+  width: min(980px, calc(100% - 40px));
+  min-height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: clamp(2rem, 7vw, 6rem);
+}
+
+.eyebrow, .stats span {
+  color: #b6acff;
+  font: 0.72rem/1 "DM Mono", monospace;
+  letter-spacing: .12em;
+}
+
+h1 { margin: .8rem 0 1.4rem; font-size: clamp(3.4rem, 8vw, 6.6rem); line-height: .82; letter-spacing: -.08em; }
+h1 span { color: var(--accent); }
+.description { max-width: 26rem; color: #cec5d0; line-height: 1.9; }
+
+.game-card { padding: clamp(1.4rem, 4vw, 2.5rem); border: 1px solid #ffffff24; border-radius: 28px; background: #ffffff0d; box-shadow: 0 24px 80px #0005; backdrop-filter: blur(10px); }
+.stats { display: flex; justify-content: space-between; margin-bottom: 2rem; }
+.stats div { display: grid; gap: .45rem; }
+.stats div:last-child { text-align: right; }
+.stats strong { font: 1.4rem "DM Mono", monospace; }
+
+.reaction-button {
+  width: 100%; aspect-ratio: 1; border: 0; border-radius: 22px; cursor: pointer;
+  color: #19141d; background: var(--paper); transition: transform .16s ease, background .2s ease, box-shadow .2s ease;
+  display: grid; place-content: center; gap: .7rem; font-family: inherit;
+}
+.reaction-button:hover { transform: translateY(-4px); }
+.reaction-button:active { transform: scale(.97); }
+.reaction-button span { font: 900 clamp(2.2rem, 6vw, 4.5rem)/1 "DM Mono", monospace; letter-spacing: -.08em; }
+.reaction-button small { font-weight: 700; }
+.reaction-button.waiting { background: #e8c45c; box-shadow: 0 0 54px #e8c45c55; }
+.reaction-button.go { background: #6fffb0; box-shadow: 0 0 70px #6fffb088; }
+.reaction-button.too-soon { background: #ff7891; }
+.status { min-height: 2rem; margin: 1.5rem 0 0; color: #d9d1da; text-align: center; }
+
+@media (max-width: 700px) {
+  .game-shell { padding: 4rem 0; grid-template-columns: 1fr; }
+  h1 { font-size: clamp(3.8rem, 18vw, 6rem); }
+}
